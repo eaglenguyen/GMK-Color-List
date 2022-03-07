@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GMK</string>
+    <string name="affirmation1">Black</string>
+    <string name="affirmation2">White</string>
 </resources>
