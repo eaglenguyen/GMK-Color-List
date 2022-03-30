@@ -1,24 +1,64 @@
 package com.example.gmk
 
-import android.content.Intent
+
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_start.*
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.gmk.databinding.ActivityDetailBinding
 
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController: NavController
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        // Get the navigation host fragment from this Activity
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+
+        // Instantiate the navController using the NavHostFragment
+        navController = navHostFragment.navController
+
+        // Make sure actions in the ActionBar get propagated to the NavController
+        setupActionBarWithNavController(navController)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Old activity for StartScreen
+ *
     override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_start)
 
             button.setOnClickListener {
-                Toast.makeText(this, "Clicked!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "WooHoo!", Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(this, DetailActivity::class.java)
                 startActivity(intent)
             }
 
         }
-    }
+    */
+}

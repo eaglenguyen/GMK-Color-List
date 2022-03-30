@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color">
+        <item>black</item>
+        <item>blue</item>
+        <item>red</item>
+        <item>white</item>
+    </string-array>
+    <string-array name="black">
+        <item>Grey-on-Black</item>
+        <item>WoB-Red-Cyrillic</item>
+    </string-array>
+    <string-array name="blue">
+        <item>Indigo</item>
+        <item>Evil-Eye</item>
+    </string-array>
+    <string-array name="red">
+        <item>Perestroika</item>
+        <item>Villanelle</item>
+    </string-array>
+    <string-array name="white">
+        <item>Classic-Black-on-White</item>
+        <item>Minimal-R2</item>
+    </string-array>
+</resources>
