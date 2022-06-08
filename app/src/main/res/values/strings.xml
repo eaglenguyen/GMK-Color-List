@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">GMK</string>
-    <string name="color_list_fragment_label">Colors</string>
-    <string name="word_list_fragment_label">Keycaps</string>
+    <string name="ColorList">Colors</string>
     <string name="detail_color">GMK Colors</string>
     <string name="action_switch_layout" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="potion">GMK Keycaps</string>
+    <string name="WordList">GMK Keycaps</string>
     <string name="gmk">GMK</string>
     <string name="go">GO!</string>
+
 </resources>

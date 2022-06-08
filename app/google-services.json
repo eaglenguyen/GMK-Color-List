@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "37257922701",
+    "project_id": "gmkcolors",
+    "storage_bucket": "gmkcolors.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37257922701:android:9fa217dc6154180cc27ac4",
+        "android_client_info": {
+          "package_name": "com.example.gmk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "37257922701-87u443lli5f6o58e8rr1l7ucouddpc2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1Rq-1QR5cJYvT2vgnapQSGoPpdHorJgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "37257922701-87u443lli5f6o58e8rr1l7ucouddpc2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

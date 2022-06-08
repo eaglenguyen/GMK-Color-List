@@ -20,11 +20,19 @@ class ColorListFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private var isLinearLayoutManager = true
 
+
+    // Link for implicit intent in Mainactivity
+    companion object {
+        const val SEARCH_PREFIX = "https://matrixzj.github.io/docs/gmk-keycaps/"
+    }
+
     // Option menu is displayed with this logic
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
     }
+
+
 // layout inflates onCreateView on Fragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,18 +43,7 @@ class ColorListFragment : Fragment() {
         return view
     }
 
-    /** Old/Activity  layout inflater
-     *
-     * override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-        val binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        recyclerView = binding.recyclerView
-
-    }
-     */
 
     // Where recyclerview goes and where you bind specific views to properties by calling findViewById()
     // Below doesnt use findViewById because it uses recyclerview
@@ -63,18 +60,6 @@ class ColorListFragment : Fragment() {
         setIcon(layoutButton)
     }
 
-    /** Activity way of onCreateOptionsMenu
-     *
-     *     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-                menuInflater.inflate(R.menu.layout_menu, menu)
-
-                 val layoutButton = menu?.findItem(R.id.action_switch_layout)
-                // Calls code to set the icon based on the LinearLayoutManager of the RecyclerView
-                setIcon(layoutButton)
-
-                return true
-    }
-     */
 
     /**
      * Below is code for layout menu button

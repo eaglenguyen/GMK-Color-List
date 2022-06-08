@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="color">
-        <item>black</item>
-        <item>blue</item>
-        <item>red</item>
-        <item>white</item>
+        <item>green</item>
+        <item>Blue</item>
+        <item>Black</item>
+        <item>White</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Grey/Beige</item>
+        <item>Brown</item>
+        <item>Orange</item>
+        <item>MultiColor</item>
+        <item>Add-ons</item>
+    </string-array>
+    <string-array name="colorCode">
+        <item>4caf50</item>
+        <item>0d47a1</item>
+        <item>000000</item>
+        <item>eeeeee</item>
+        <item>b71c1c</item>
+        <item>fdd835</item>
+        <item>f48fb1</item>
+        <item>6a1b9a</item>
+        <item>757575</item>
+        <item>3e2723</item>
+        <item>ef6c00</item>
+        <item>212121</item>
+        <item>212121</item>
     </string-array>
     <string-array name="black">
         <item>Grey-on-Black</item>
