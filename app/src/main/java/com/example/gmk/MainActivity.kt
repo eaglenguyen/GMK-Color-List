@@ -17,7 +17,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.gmk.databinding.ActivityDetailBinding
-import kotlinx.android.synthetic.main.activity_detail.*
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     // variables for nav controller and viewmodel
     private lateinit var navController: NavController
     private val viewModel: MainViewModel by viewModels()
+    private lateinit var binding: ActivityDetailBinding
 
 
 
@@ -41,8 +42,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
+        val view = (binding.root)
+        setContentView(view)
 
 
         // A reference to nav host fragment
@@ -59,16 +61,16 @@ class MainActivity : AppCompatActivity() {
 
         // Make sure actions in the ActionBar get propagated to the NavController
         setupActionBarWithNavController(navController)
-        bottomNav.setupWithNavController(navController)
+        binding.bottomNav.setupWithNavController(navController)
 
 
         // Logic for home button to navigate to colorList
-        bottomNav.setOnItemSelectedListener {
+        binding.bottomNav.setOnItemSelectedListener {
 
 
 
             // Logic for Implicit intent
-            val titles : TextView = findViewById(R.id.textView)
+            val titles : TextView = findViewById(R.id.titles)
             val queryUrl: Uri = Uri.parse("${ColorListFragment.SEARCH_PREFIX}${titles.text}")
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
 
@@ -84,9 +86,20 @@ class MainActivity : AppCompatActivity() {
         // Logic to only show bottom nav on greenFragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id) {
-                R.id.greenFragment -> bottomNav.visibility = View.VISIBLE
-                R.id.blueFragment ->  bottomNav.visibility = View.VISIBLE
-                else -> bottomNav.visibility = View.GONE
+                R.id.greenFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.blueFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.blackFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.whiteFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.redFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.yellowFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.pinkFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.purpleFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.greyFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.brownFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.orangeFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.multiColorFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.additionFragment -> binding.bottomNav.visibility = View.VISIBLE
+                else -> binding.bottomNav.visibility = View.GONE
             }
 
             }

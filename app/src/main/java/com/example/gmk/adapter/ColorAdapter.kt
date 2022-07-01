@@ -47,9 +47,11 @@ class ColorAdapter (context: Context) :
      * Replace the contents of a view (invoked by the layout manager)
      */
     override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {
-
+        // color name for each button
         val item = filteredWords[position]
-        var color = "#" + colors[position]
+        // Color code for each button
+        val color = "#" + colors[position]
+
 
         holder.buttonView.text = item
         holder.buttonView.setBackgroundColor(Color.parseColor(color))
@@ -59,7 +61,7 @@ class ColorAdapter (context: Context) :
 
         holder.buttonView.setOnClickListener {
 
-            val action = ColorListFragmentDirections.actionColorListFragmentToNewWordFragment(number = position, word = item)
+            val action = ColorListFragmentDirections.actionColorListFragmentToGmkListFragment(number = position, word = item)
             holder.view.findNavController().navigate(action)
 
         }

@@ -1,5 +1,6 @@
 package com.example.gmk
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,18 +9,17 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gmk.adapter.NewWordAdapter
+import com.example.gmk.adapter.GmkListAdapter
 import com.example.gmk.colors.*
-import com.example.gmk.databinding.FragmentNewWordBinding
+import com.example.gmk.databinding.FragmentGmkListBinding
 
 
 
 class GmkListFragment : Fragment(), OnItemClickListener {
 
-    private var _binding: FragmentNewWordBinding? = null
+    private var _binding: FragmentGmkListBinding? = null
     private lateinit var recyclerView: RecyclerView
     private val binding get() = _binding!!
 
@@ -32,7 +32,7 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentNewWordBinding.inflate(inflater, container, false)
+        _binding = FragmentGmkListBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -49,12 +49,18 @@ class GmkListFragment : Fragment(), OnItemClickListener {
 
         // populates the color keycaps list via position. Data/list from GmkListFragment
         // Position of companion obj - list
-        recyclerView.adapter = NewWordAdapter(list[position], this)
+        recyclerView.adapter = GmkListAdapter(list[position], this)
 
+
+        /*
         recyclerView.addItemDecoration(
             DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
         )
+        */
+
+        // greenPic.fill(0,1,2)
     }
+
 
 
 
@@ -64,15 +70,35 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         val item = args.word
 
 
-        val action = GmkListFragmentDirections.actionGmkListFragmentToGreenFragment(number = position, image = greenPic[position], title = greenTitle[position], price = greenPrice[position], info = greenInfo[position])
-        val action2 = GmkListFragmentDirections.actionGmkListFragmentToBlueFragment(number2 = position, image2 = bluePic[position], title2 = blueTitle[position], price2 = bluePrice[position])
+        val action1 = GmkListFragmentDirections.actionGmkListFragmentToGreenFragment(number = position, image = greenPic[position], title = greenTitle[position], price = greenPrice[position])
+        val action2 = GmkListFragmentDirections.actionGmkListFragmentToBlueFragment(numberBlue = position, imageBlue = bluePic[position], titleBlue = blueTitle[position], priceBlue = bluePrice[position])
+        val action3 = GmkListFragmentDirections.actionGmkListFragmentToBlackFragment(numberBlack = position, imageBlack = blackPic[position], titleBlack = blackTitle[position], priceBlack = blackPrice[position])
+        val action4 = GmkListFragmentDirections.actionGmkListFragmentToWhiteFragment(numberWhite = position, imageWhite = whitePic[position], titleWhite = whiteTitle[position], priceWhite = whitePrice[position])
+        val action5 = GmkListFragmentDirections.actionGmkListFragmentToRedFragment(numberRed = position, imageRed = redPic[position], titleRed = redTitle[position], priceRed = redPrice[position])
+        val action6 = GmkListFragmentDirections.actionGmkListFragmentToYellowFragment(numberYellow = position, imageYellow = yellowPic[position], titleYellow = yellowTitle[position], priceYellow = yellowPrice[position])
+        val action7 = GmkListFragmentDirections.actionGmkListFragmentToPinkFragment(numberPink = position, imagePink = pinkPic[position], titlePink = pinkTitle[position], pricePink = pinkPrice[position])
+        val action8 = GmkListFragmentDirections.actionGmkListFragmentToPurpleFragment(numberPurp = position, imagePurp = purpPic[position], titlePurp = purpTitle[position], pricePurp = purpPrice[position])
+        val action9 = GmkListFragmentDirections.actionGmkListFragmentToGreyFragment(numberGrey = position, imageGrey = greyPic[position], titleGrey = greyTitle[position], priceGrey = greyPrice[position])
+        val action10 = GmkListFragmentDirections.actionGmkListFragmentToBrownFragment(numberBrown = position, imageBrown = brownPic[position], titleBrown = brownTitle[position], priceBrown = brownPrice[position])
+        val action11 = GmkListFragmentDirections.actionGmkListFragmentToOrangeFragment(numberOrange = position, imageOrange = orangePic[position], titleOrange = orangeTitle[position], priceOrange = orangePrice[position])
+        val action12 = GmkListFragmentDirections.actionGmkListFragmentToMultiColorFragment(numberMulti = position, imageMulti = multiPic[position], titleMulti = multiTitle[position], priceMulti = multiPrice[position])
+        val action13 = GmkListFragmentDirections.actionGmkListFragmentToAdditionFragment(numberAddition = position, imageAddition = additionPic[position], titleAddition = additionTitle[position], priceAddition = additionPrice[position])
 
-        if (item == "green") {
-            view?.findNavController()?.navigate(action)
-        } else {
-            view?.findNavController()?.navigate(action2)
+        when (item) {
+            "green" -> {view?.findNavController()?.navigate(action1)}
+            "blue"-> {view?.findNavController()?.navigate(action2)}
+            "black" -> {view?.findNavController()?.navigate(action3)}
+            "white" -> {view?.findNavController()?.navigate(action4)}
+            "red" -> {view?.findNavController()?.navigate(action5)}
+            "yellow" -> {view?.findNavController()?.navigate(action6)}
+            "pink" -> {view?.findNavController()?.navigate(action7)}
+            "purple" -> {view?.findNavController()?.navigate(action8)}
+            "grey/Beige" -> {view?.findNavController()?.navigate(action9)}
+            "brown" -> {view?.findNavController()?.navigate(action10)}
+            "orange" -> {view?.findNavController()?.navigate(action11)}
+            "multiColor" -> {view?.findNavController()?.navigate(action12)}
+            "addons" -> {view?.findNavController()?.navigate(action13)}
         }
-
     }
 
 

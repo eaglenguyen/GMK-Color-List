@@ -2,18 +2,18 @@
 <resources>
     <string-array name="color">
         <item>green</item>
-        <item>Blue</item>
-        <item>Black</item>
-        <item>White</item>
-        <item>Red</item>
-        <item>Yellow</item>
-        <item>Pink</item>
-        <item>Purple</item>
-        <item>Grey/Beige</item>
-        <item>Brown</item>
-        <item>Orange</item>
-        <item>MultiColor</item>
-        <item>Add-ons</item>
+        <item>blue</item>
+        <item>black</item>
+        <item>white</item>
+        <item>red</item>
+        <item>yellow</item>
+        <item>pink</item>
+        <item>purple</item>
+        <item>grey/Beige</item>
+        <item>brown</item>
+        <item>orange</item>
+        <item>multiColor</item>
+        <item>addons</item>
     </string-array>
     <string-array name="colorCode">
         <item>4caf50</item>

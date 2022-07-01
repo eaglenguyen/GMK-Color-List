@@ -13,14 +13,14 @@
         tools:layout="@layout/fragment_color_list">
 
         <action
-            android:id="@+id/action_colorListFragment_to_newWordFragment"
+            android:id="@+id/action_colorListFragment_to_gmkListFragment"
             app:destination="@id/gmkListFragment" />
     </fragment>
     <fragment
         android:id="@+id/gmkListFragment"
         android:name="com.example.gmk.GmkListFragment"
         android:label="@string/WordList"
-        tools:layout="@layout/fragment_new_word">
+        tools:layout="@layout/fragment_gmk_list">
         <argument
             android:name="number"
             app:argType="integer" />
@@ -30,16 +30,47 @@
         <argument
             android:name="word"
             app:argType="string" />
-        <action
-            android:id="@+id/action_gmkListFragment_to_colorListFragment"
-            app:destination="@id/colorListFragment" />
+
         <action
             android:id="@+id/action_gmkListFragment_to_blueFragment"
             app:destination="@id/blueFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_blackFragment"
+            app:destination="@id/blackFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_whiteFragment"
+            app:destination="@id/whiteFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_redFragment"
+            app:destination="@id/redFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_yellowFragment"
+            app:destination="@id/yellowFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_pinkFragment"
+            app:destination="@id/pinkFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_purpleFragment"
+            app:destination="@id/purpleFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_brownFragment"
+            app:destination="@id/brownFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_greyFragment"
+            app:destination="@id/greyFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_orangeFragment"
+            app:destination="@id/orangeFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_multiColorFragment"
+            app:destination="@id/multiColorFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_additionFragment"
+            app:destination="@id/additionFragment" />
     </fragment>
     <fragment
         android:id="@+id/greenFragment"
-        android:name="com.example.gmk.GreenFragment"
+        android:name="com.example.gmk.colorfrag.GreenFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_detail">
         <argument
@@ -57,29 +88,246 @@
         <action
             android:id="@+id/action_greenFragment_to_colorListFragment"
             app:destination="@id/colorListFragment" />
-        <argument
-            android:name="info"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/blueFragment"
-        android:name="com.example.gmk.BlueFragment"
-        android:label="{title2}"
+        android:name="com.example.gmk.colorfrag.BlueFragment"
+        android:label="{titleBlue}"
         tools:layout="@layout/fragment_detail">
         <action
             android:id="@+id/action_blueFragment_to_colorListFragment"
             app:destination="@id/colorListFragment" />
         <argument
-            android:name="number2"
+            android:name="numberBlue"
             app:argType="integer" />
         <argument
-            android:name="image2"
+            android:name="imageBlue"
             app:argType="reference" />
         <argument
-            android:name="title2"
+            android:name="titleBlue"
             app:argType="string" />
         <argument
-            android:name="price2"
+            android:name="priceBlue"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/blackFragment"
+        android:name="com.example.gmk.colorfrag.BlackFragment"
+        android:label="{titleBlack}">
+        <action
+            android:id="@+id/action_blackFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberBlack"
+            app:argType="integer" />
+        <argument
+            android:name="imageBlack"
+            app:argType="reference" />
+        <argument
+            android:name="titleBlack"
+            app:argType="string" />
+        <argument
+            android:name="priceBlack"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/whiteFragment"
+        android:name="com.example.gmk.colorfrag.WhiteFragment"
+        android:label="{titleWhite}">
+        <action
+            android:id="@+id/action_whiteFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberWhite"
+            app:argType="integer" />
+        <argument
+            android:name="imageWhite"
+            app:argType="reference" />
+        <argument
+            android:name="titleWhite"
+            app:argType="string" />
+        <argument
+            android:name="priceWhite"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/redFragment"
+        android:name="com.example.gmk.colorfrag.RedFragment"
+        android:label="{titleRed}">
+        <action
+            android:id="@+id/action_redFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberRed"
+            app:argType="integer" />
+        <argument
+            android:name="imageRed"
+            app:argType="reference" />
+        <argument
+            android:name="titleRed"
+            app:argType="string" />
+        <argument
+            android:name="priceRed"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/yellowFragment"
+        android:name="com.example.gmk.colorfrag.YellowFragment"
+        android:label="{titleYellow}">
+        <action
+            android:id="@+id/action_yellowFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberYellow"
+            app:argType="integer" />
+        <argument
+            android:name="imageYellow"
+            app:argType="reference" />
+        <argument
+            android:name="titleYellow"
+            app:argType="string" />
+        <argument
+            android:name="priceYellow"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinkFragment"
+        android:name="com.example.gmk.colorfrag.PinkFragment"
+        android:label="{titlePink}">
+        <argument
+            android:name="numberPink"
+            app:argType="integer" />
+        <argument
+            android:name="imagePink"
+            app:argType="reference" />
+        <argument
+            android:name="titlePink"
+            app:argType="string" />
+        <argument
+            android:name="pricePink"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_pinkFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purpleFragment"
+        android:name="com.example.gmk.colorfrag.PurpleFragment"
+        android:label="{titlePurp}">
+        <action
+            android:id="@+id/action_purpleFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberPurp"
+            app:argType="integer" />
+        <argument
+            android:name="imagePurp"
+            app:argType="reference" />
+        <argument
+            android:name="titlePurp"
+            app:argType="string" />
+        <argument
+            android:name="pricePurp"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/brownFragment"
+        android:name="com.example.gmk.colorfrag.BrownFragment"
+        android:label="{titleBrown}">
+        <action
+            android:id="@+id/action_brownFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberBrown"
+            app:argType="integer" />
+        <argument
+            android:name="imageBrown"
+            app:argType="reference" />
+        <argument
+            android:name="titleBrown"
+            app:argType="string" />
+        <argument
+            android:name="priceBrown"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/greyFragment"
+        android:name="com.example.gmk.colorfrag.GreyFragment"
+        android:label="{titleGrey}" >
+        <action
+            android:id="@+id/action_greyFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberGrey"
+            app:argType="integer" />
+        <argument
+            android:name="imageGrey"
+            app:argType="reference" />
+        <argument
+            android:name="titleGrey"
+            app:argType="string" />
+        <argument
+            android:name="priceGrey"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/orangeFragment"
+        android:name="com.example.gmk.colorfrag.OrangeFragment"
+        android:label="{titleOrange}">
+        <action
+            android:id="@+id/action_orangeFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberOrange"
+            app:argType="integer" />
+        <argument
+            android:name="imageOrange"
+            app:argType="reference" />
+        <argument
+            android:name="titleOrange"
+            app:argType="string" />
+        <argument
+            android:name="priceOrange"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiColorFragment"
+        android:name="com.example.gmk.colorfrag.MultiColorFragment"
+        android:label="{titleMulti}">
+        <action
+            android:id="@+id/action_multiColorFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberMulti"
+            app:argType="integer" />
+        <argument
+            android:name="imageMulti"
+            app:argType="reference" />
+        <argument
+            android:name="titleMulti"
+            app:argType="string" />
+        <argument
+            android:name="priceMulti"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/additionFragment"
+        android:name="com.example.gmk.colorfrag.AdditionFragment"
+        android:label="{titleAddition}">
+        <action
+            android:id="@+id/action_additionFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="numberAddition"
+            app:argType="integer" />
+        <argument
+            android:name="imageAddition"
+            app:argType="reference" />
+        <argument
+            android:name="titleAddition"
+            app:argType="string" />
+        <argument
+            android:name="priceAddition"
             app:argType="string" />
     </fragment>
 
