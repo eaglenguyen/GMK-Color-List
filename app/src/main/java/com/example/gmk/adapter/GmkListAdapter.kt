@@ -22,20 +22,16 @@ class GmkListAdapter (
     // Logic for onclick on the items
     inner class GmkListViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
 
-
-
         init {
             binding.root.setOnClickListener {
                 val position = adapterPosition
 
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position)
+                }
             }
-        }
 
         }
-
-
 
     }
 
