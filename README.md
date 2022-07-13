@@ -18,7 +18,7 @@ GMK Color list was originally designed with keyboard enthusiast in mind. There w
 ![APP video](https://media0.giphy.com/media/YsooJvYr3xb2EaUQnx/giphy.gif?cid=790b7611e57cd84f35903e80e2fce52167a16978ff7a9f9c&rid=giphy.gif&ct=g) 
 
 ## Download
-COMING SOON to Google play store!
+COMING SOON to Google play store! <br>
 IOS currently not supported
 
 ## Future Plans
