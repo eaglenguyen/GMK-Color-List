@@ -1,6 +1,7 @@
 # GMK Color List
 
 ![GMK banner](https://i.imgur.com/lvDlfrU.png)
+<small>Image by [CandyKeys](https://candykeys.com/group-buys/gmk-dots)</small>
 
 
 ## About
@@ -28,4 +29,4 @@ Thank you for [Matrix's](https://matrixzj.github.io/resume/) endless hours of lo
 
 ## Author
 
-Eagle Nguyen, eaglenguyen1@gmail.com // u/SBGU_Eagle
+Eagle Nguyen, eaglenguyen1@gmail.com
