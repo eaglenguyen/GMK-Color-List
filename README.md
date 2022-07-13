@@ -1,6 +1,6 @@
 # GMK Color List
 
-![GMK banner](https://i.imgur.com/lvDlfrU.png)
+![GMK banner](https://i.imgur.com/lvDlfrU.png)<br>
 <small>Image by [CandyKeys](https://candykeys.com/group-buys/gmk-dots)</small>
 
 
