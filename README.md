@@ -19,13 +19,13 @@ GMK Color list was originally designed with keyboard enthusiast in mind. There w
 
 ## Download
 COMING SOON to Google play store! <br>
-IOS currently not supported
+IOS currently not supported.
 
 ## Future Plans
 
-- [ ] Make UI look prettier
-- [ ] Add multiple pictures for child kits (currently only shows base kit picture)
-- [ ] Have a schedule for bi-monthly updates
+- [ ] Make UI look prettier.
+- [ ] Add multiple pictures for child kits (currently only shows base kit picture).
+- [ ] Have a schedule for bi-monthly updates.
 
 ## Credits
 
