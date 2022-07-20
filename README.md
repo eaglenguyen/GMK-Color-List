@@ -33,7 +33,7 @@ IOS currently not supported.
 
 Thank you for [Matrix's](https://matrixzj.github.io/resume/) endless hours of logging in all those GMK keycap details , inspired me to start and finish this project as quick as possible.
 
-## Author
+## Contact and Socials
 
 egorcodes617@gmail.com <br>
 [Discord](https://discord.com/users/182185100983795713) <br>
