@@ -35,6 +35,6 @@ Thank you for [Matrix's](https://matrixzj.github.io/resume/) endless hours of lo
 
 ## Author
 
-[Email](egorcodes617@gmail.com) <br>
+egorcodes617@gmail.com <br>
 [Discord](https://discord.com/users/182185100983795713) <br>
 [Instagram](https://www.instagram.com/boredofboards_/)
