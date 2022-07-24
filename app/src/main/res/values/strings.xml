@@ -4,4 +4,30 @@
     <string name="action_switch_layout" />
     <string name="WordList">GMK Keycaps</string>
     <string name="gmk">GMK</string>
+    <string name="settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="general">General</string>
+    <string name="dark_theme">Dark Theme</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="socials">Socials</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="reddit">SBGU_Eagle on Reddit</string>
+    <string name="instagram">Follow @boredofboards_ on Instagram</string>
+    <string name="github">Check out future updates on Github</string>
+    <string name="resources">Resources</string>
+    <string name="discord">#Shmeagle9750</string>
 </resources>

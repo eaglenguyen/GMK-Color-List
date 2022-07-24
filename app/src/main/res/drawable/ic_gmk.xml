@@ -1,7 +1,7 @@
 <vector android:height="91.42857dp" android:viewportHeight="432"
     android:viewportWidth="945" android:width="200dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:scaleY="0.4"
-        android:scaleX="0.6"
+        android:scaleX="0.61"
         android:pivotY="250"
         android:pivotX="450">
     <path android:fillColor="#0288d1"

@@ -1,0 +1,78 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    <PreferenceCategory app:title="@string/general">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="switch_preference"
+            app:title="@string/dark_theme" />
+
+    </PreferenceCategory>  -->
+
+    <PreferenceCategory app:title="@string/socials">
+
+
+        <Preference
+            app:key="reddit"
+            app:title="@string/reddit"
+            android:icon="@drawable/redditlogoo">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.reddit.com/user/SBGU_Eagle"/>
+
+        </Preference>
+
+
+        <Preference
+            app:key="insta"
+            app:title="@string/instagram"
+            android:icon="@drawable/insta">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.instagram.com/boredofboards_/"/>  />
+
+        </Preference>
+
+        <Preference
+
+            app:key="github"
+            app:title="@string/github"
+            android:icon="@drawable/github">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/EagleNewyen"/> />
+
+        </Preference>
+
+        <Preference
+
+            app:key="discord"
+            app:title="@string/discord"
+            android:icon="@drawable/discordd">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://discord.com/users/182185100983795713" /> />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+
+        <PreferenceCategory app:title="@string/resources" >
+
+        <Preference
+            app:key="policy"
+            app:title="@string/privacy"
+            android:icon="@drawable/file">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://www.privacypolicies.com/live/6032962a-21a4-4110-84e2-86383e47051f"
+                />
+        </Preference>
+
+        </PreferenceCategory>
+
+
+
+
+</PreferenceScreen>

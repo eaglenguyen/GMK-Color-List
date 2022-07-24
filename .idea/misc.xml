@@ -24,6 +24,7 @@
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_example.xml" value="0.25462962962962965" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_gmk_list.xml" value="0.19224924012158054" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_new_word.xml" value="0.33" />
+        <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_preference.xml" value="0.1534954407294833" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_second.xml" value="0.5" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_start.xml" value="0.1524822695035461" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/fragment_start_screen.xml" value="0.55" />
@@ -34,12 +35,19 @@
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/list_item.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/layout/new_fragment_words.xml" value="0.32065217391304346" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/menu/bottom_menu.xml" value="0.34739583333333335" />
-        <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/menu/layout_menu.xml" value="0.32407407407407407" />
+        <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/menu/layout_menu.xml" value="0.2694610778443114" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/menu/menu_bottom_nav.xml" value="0.34322916666666664" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/mipmap-anydpi-v26/ic_gmk.xml" value="0.1" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/mipmap-anydpi-v26/ic_gmk_round.xml" value="0.1" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/xml/menu_preference.xml" value="1.0" />
+        <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/xml/root_preferences.xml" value="0.25" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/activity_detail.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_color_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_detail.xml" value="0.21" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_gmk_list.xml" value="0.25" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/item_view.xml" value="0.33" />
       </map>
     </option>
   </component>

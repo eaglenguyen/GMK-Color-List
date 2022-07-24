@@ -22,10 +22,9 @@
 
     <View
         android:id="@+id/view_space"
-        android:layout_width="380dp"
-        android:layout_height="0dp"
+        android:layout_width="382dp"
+        android:layout_height="90dp"
         android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/new_images" />
@@ -37,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Title"
+        android:textSize="18dp"
         android:textColor="@color/grey"
         android:padding="4dp"
         android:textStyle="bold"
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:text="Price"
         android:textColor="@color/grey"
-        android:textStyle="bold"
+        android:textStyle="italic"
         android:padding="4dp"
         app:layout_constraintStart_toStartOf="@+id/view_space"
         app:layout_constraintTop_toBottomOf="@+id/titles" />

@@ -8,8 +8,10 @@
     <color name="light_grey">#e0e0e0</color>
     <color name="grey">#424242</color>
     <color name="grey_var">#1b1b1b</color>
+    <color name="lighter_grey">#474747</color>
     <color name="light_red">#ffcdd2</color>
     <color name="light_red_var">#cb9ca1</color>
+    <color name="light_black">#0a0a0a</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

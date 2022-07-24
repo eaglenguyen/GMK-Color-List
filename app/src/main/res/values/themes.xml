@@ -1,16 +1,17 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.GMK" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.GMK" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/grey</item>
         <item name="colorPrimaryVariant">@color/grey_var</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/light_red</item>
-        <item name="colorSecondaryVariant">@color/light_red_var</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>
