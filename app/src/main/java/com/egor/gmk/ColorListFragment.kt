@@ -59,9 +59,9 @@ class ColorListFragment : Fragment() {
 
     @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(com.egor.gmk.R.menu.layout_menu, menu)
+        inflater.inflate(R.menu.layout_menu, menu)
 
-        val layoutButton = menu.findItem(com.egor.gmk.R.id.action_switch_layout)
+        val layoutButton = menu.findItem(R.id.action_switch_layout)
         setIcon(layoutButton)
     }
 
@@ -92,10 +92,10 @@ class ColorListFragment : Fragment() {
         menuItem.icon =
             if (isLinearLayoutManager)
                 ContextCompat.getDrawable(this.requireContext(),
-                    com.egor.gmk.R.drawable.ic_grid_layout
+                    R.drawable.ic_grid_layout
                 )
             else ContextCompat.getDrawable(this.requireContext(),
-                com.egor.gmk.R.drawable.ic_linear_layout
+                R.drawable.ic_linear_layout
             )
     }
 
@@ -119,7 +119,7 @@ class ColorListFragment : Fragment() {
 
     }
     private fun goToPreferenceFrag(){
-        Toast.makeText(requireContext(), "item is clicked", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(requireContext(), "item is clicked", Toast.LENGTH_SHORT).show()
         val action = ColorListFragmentDirections.actionColorListFragmentToSettingsFragment()
         findNavController().navigate(action)
     }

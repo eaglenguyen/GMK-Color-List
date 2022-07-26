@@ -6,7 +6,7 @@ plugins {
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
     // id 'kotlin-parcelize'
-    // id 'com.google.gms.google-services'
+    // id 'com.google.gms.google-services6'
 
 }
 
@@ -17,8 +17,8 @@ android {
         applicationId "com.egor.gmk"
         minSdk 23
         targetSdk 31
-        versionCode 3
-        versionName "1.1"
+        versionCode 5
+        versionName "1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
