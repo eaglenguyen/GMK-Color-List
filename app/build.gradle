@@ -17,8 +17,8 @@ android {
         applicationId "com.egor.gmk"
         minSdk 23
         targetSdk 31
-        versionCode 5
-        versionName "1.2"
+        versionCode 7
+        versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -45,7 +45,7 @@ dependencies {
 
 
     // Kotlin
-    implementation"androidx.fragment:fragment-ktx:1.5.0"
+    implementation"androidx.fragment:fragment-ktx:1.5.1"
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -69,14 +69,14 @@ dependencies {
 
 
     // def nav_version = '2.4.2'
-    implementation "androidx.navigation:navigation-fragment-ktx:2.5.0"
-    implementation "androidx.navigation:navigation-ui-ktx:2.5.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.1"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.1"
 
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
-    androidTestImplementation 'androidx.navigation:navigation-testing:2.5.0'
+    androidTestImplementation 'androidx.navigation:navigation-testing:2.5.1'
 
-    debugImplementation 'androidx.fragment:fragment-testing:1.5.0'
+    debugImplementation 'androidx.fragment:fragment-testing:1.5.1'
 
-    implementation 'androidx.core:core-splashscreen:1.0.0-rc01'
+    implementation 'androidx.core:core-splashscreen:1.0.0'
 
 }

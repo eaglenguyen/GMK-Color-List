@@ -44,7 +44,7 @@ var blue = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.bela, "Belafonte", "$120"),
     com.egor.gmk.GmkListData(R.drawable.bento, "Bento", "$125"),
     com.egor.gmk.GmkListData(R.drawable.blue_alert, "Blue Alert", "$125"),
-    com.egor.gmk.GmkListData(R.drawable.blueple, "Blueple", "$119.99"),
+    com.egor.gmk.GmkListData(R.drawable.bluple, "Blueple", "$119.99"),
     com.egor.gmk.GmkListData(R.drawable.blue_sam, "Blue Samurai", "$125"),
     com.egor.gmk.GmkListData(R.drawable.calm, "Calm Depths", "$124.99"),
     com.egor.gmk.GmkListData(R.drawable.classic_blue2, "Classic Blue", "$130.00"),
@@ -163,7 +163,7 @@ var white = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.birch, "Birch", "$134.99"),
     com.egor.gmk.GmkListData(R.drawable.bleached, "Bleached", "$99.99"),
     com.egor.gmk.GmkListData(R.drawable.boho, "Boho", "$124.99"),
-    com.egor.gmk.GmkListData(R.drawable.bow_hangul, "WoB/BoW Hangul", "$135"),
+    com.egor.gmk.GmkListData(R.drawable.bow_hangul, "BoW Hangul", "$135"),
     com.egor.gmk.GmkListData(R.drawable.cafe, "Cafe", "$125"),
     com.egor.gmk.GmkListData(R.drawable.civil, "Civilizations", "$125"),
     com.egor.gmk.GmkListData(R.drawable.classic_bow, "Classic Black on White", "$124.99"),
@@ -173,7 +173,7 @@ var white = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.fuji, "Fuji", "$129.99"),
     com.egor.gmk.GmkListData(R.drawable.fuyu, "Fuyu", "$149.99"),
     com.egor.gmk.GmkListData(R.drawable.grand_prix, "Grand Prix", "$125"),
-    com.egor.gmk.GmkListData(R.drawable.hennessey_base, "Hennessey", "$100"),
+    com.egor.gmk.GmkListData(R.drawable.hennessey, "Hennessey", "$100"),
     com.egor.gmk.GmkListData(R.drawable.honor_light, "Honor", "$95"),
     com.egor.gmk.GmkListData(R.drawable.kouhai, "Kouhai", "$135"),
     com.egor.gmk.GmkListData(R.drawable.maestro, "Maestro", "$135"),
@@ -236,8 +236,7 @@ var yellow = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.lux, "Lux", "$129.99"),
     com.egor.gmk.GmkListData(R.drawable.mika, "Mika", "$129"),
     com.egor.gmk.GmkListData(R.drawable.mudbeam, "Mudbeam", "$135"),
-    com.egor.gmk.GmkListData(R.drawable.nightrunner, "Night Runner", "$129.99"),
-    com.egor.gmk.GmkListData(R.drawable.penu, "Penumbra (w/ green mods)", "$170"),
+    com.egor.gmk.GmkListData(R.drawable.nightrunner, "Night Runner (w/ yellow legends)", "$129.99"),
     com.egor.gmk.GmkListData(R.drawable.pharaoh, "Pharaoh", "$124"),
     com.egor.gmk.GmkListData(R.drawable.serika, "Serika", "$110"),
 )
@@ -268,7 +267,7 @@ var purple = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.avan, "Avanguardia", "$120"),
     com.egor.gmk.GmkListData(R.drawable.bingsu, "Bingsu", "$120"),
     com.egor.gmk.GmkListData(R.drawable.lotus, "Black Lotus", "$145"),
-    com.egor.gmk.GmkListData(R.drawable.blueple, "Blueple", "$119"),
+    com.egor.gmk.GmkListData(R.drawable.bluple, "Blueple", "$119"),
     com.egor.gmk.GmkListData(R.drawable.chaos_theory, "Chaos Theory", "$120"),
     com.egor.gmk.GmkListData(R.drawable.cojiro, "Cojiro", "$134.99"),
     com.egor.gmk.GmkListData(R.drawable.darskel, "Darskel", "$150"),
@@ -394,7 +393,7 @@ var orange = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.peaches, "Peaches-n-Cream Lite", "$110"),
     com.egor.gmk.GmkListData(R.drawable.reforged, "ReForged", "$134.99"),
     com.egor.gmk.GmkListData(R.drawable.skidolcha, "Skidolcha", "$180"),
-    com.egor.gmk.GmkListData(R.drawable.skidata, "Skidata", "$145"),
+    com.egor.gmk.GmkListData(R.drawable.skidata, "Skidata", "$129"),
 )
 
 var multi = mutableListOf(
@@ -416,6 +415,7 @@ var multi = mutableListOf(
     com.egor.gmk.GmkListData(R.drawable.poly, "Polybius", "$135"),
     com.egor.gmk.GmkListData(R.drawable.prepress, "Prepress", "$149.99"),
     com.egor.gmk.GmkListData(R.drawable.pride, "Pride", "$142.99"),
+    com.egor.gmk.GmkListData(R.drawable.penu, "Penumbra", "$170"),
     com.egor.gmk.GmkListData(R.drawable.rainbow, "Rainbow", "$138"),
 )
 
