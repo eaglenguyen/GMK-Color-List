@@ -24,10 +24,9 @@ IOS currently not supported.
 
 ## Future Plans
 
-- [ ] Add multiple pictures for child kits (currently only shows base kit picture).
+- [x] Better looking UI
 - [ ] Search feature
--	[ ] Notification when new gmk keycap set is added
--	[ ] IOS version
+-	[ ] IOS version?
 
 
 ## Credits
