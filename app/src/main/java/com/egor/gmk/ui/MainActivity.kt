@@ -1,4 +1,4 @@
-package com.egor.gmk
+package com.egor.gmk.ui
 
 
 import android.content.Intent
@@ -7,15 +7,15 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+
+import com.egor.gmk.R
 import com.egor.gmk.databinding.ActivityDetailBinding
 
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     // variables for nav controller and viewmodel
     private lateinit var navController: NavController
-    private val viewModel: MainViewModel by viewModels()
+
     private lateinit var binding: ActivityDetailBinding
 
 
@@ -33,13 +33,6 @@ class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.P)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Splash Screen logic
-        installSplashScreen().apply {
-            setKeepOnScreenCondition {
-                viewModel.isLoading.value
-            }
-        }
 
 
         binding = ActivityDetailBinding.inflate(layoutInflater)
@@ -67,8 +60,8 @@ class MainActivity : AppCompatActivity() {
         // Logic for home button to navigate to colorList
         binding.bottomNav.setOnItemSelectedListener {
 
-            // Logic for Implicit intent
-            val titles : TextView = findViewById(com.egor.gmk.R.id.titles)
+            // Logic for Implicit intent ( to URL web page )
+            val titles : TextView = findViewById(R.id.titles)
             val queryUrl: Uri = Uri.parse("${ColorListFragment.SEARCH_PREFIX}${titles.text}")
             val intent = Intent(Intent.ACTION_VIEW, queryUrl)
 
@@ -84,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        // Logic to only show bottom nav on greenFragment
+        // Logic to only show bottom nav on detailed keycap fragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.greenFragment -> binding.bottomNav.visibility = View.VISIBLE

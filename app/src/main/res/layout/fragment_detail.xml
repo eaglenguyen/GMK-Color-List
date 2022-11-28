@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".colorfrag.GreenFragment">
+    tools:context=".ui.colorfrag.GreenFragment">
 
 
     <ImageView
@@ -20,39 +20,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
+    <androidx.cardview.widget.CardView
         android:id="@+id/view_space"
         android:layout_width="300dp"
         android:layout_height="90dp"
-        android:background="@color/white"
+        app:cardBackgroundColor="@color/white_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/new_images" />
+        app:layout_constraintTop_toBottomOf="@+id/new_images">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/titles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Title"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/prices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Price"
+                android:textColor="@color/grey"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titles" />
+
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-    <TextView
-        android:id="@+id/titles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title"
-        android:textSize="18dp"
-        android:textColor="@color/grey"
-        android:padding="4dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/view_space"
-        app:layout_constraintTop_toTopOf="@+id/view_space" />
-
-    <TextView
-        android:id="@+id/prices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Price"
-        android:textColor="@color/grey"
-        android:textStyle="italic"
-        android:padding="4dp"
-        app:layout_constraintStart_toStartOf="@+id/view_space"
-        app:layout_constraintTop_toBottomOf="@+id/titles" />
 
 
     <!--
@@ -69,5 +80,3 @@
 
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>

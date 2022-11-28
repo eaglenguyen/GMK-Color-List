@@ -44,11 +44,14 @@
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/xml/menu_preference.xml" value="1.0" />
         <entry key="..\:/Users/itgma/AndroidStudioProjects/GMK/app/src/main/res/xml/root_preferences.xml" value="0.25" />
         <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/activity_detail.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/button_view.xml" value="0.26875" />
         <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_color_list.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_detail.xml" value="0.21" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_detail.xml" value="0.7033374536464772" />
         <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/fragment_gmk_list.xml" value="0.25" />
-        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/item_view.xml" value="0.1" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/layout/item_view.xml" value="0.653555219364599" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/menu/bottom_menu.xml" value="0.4432291666666667" />
         <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/menu/layout_menu.xml" value="0.26296296296296295" />
+        <entry key="..\:/Users/itgma/Desktop/Projects/GMK/app/src/main/res/menu/search_menu.xml" value="0.2989583333333333" />
       </map>
     </option>
   </component>

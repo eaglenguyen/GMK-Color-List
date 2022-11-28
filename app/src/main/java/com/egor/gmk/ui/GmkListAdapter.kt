@@ -1,17 +1,17 @@
-package com.egor.gmk.adapter
+package com.egor.gmk.ui
 
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.egor.gmk.GmkListData
 import com.egor.gmk.OnItemClickListener
+import com.egor.gmk.data.GmkListData
 import com.egor.gmk.databinding.ItemViewBinding
 
 
 class GmkListAdapter (
-    var gmkListData: MutableList<com.egor.gmk.GmkListData>,
-    private val listener: com.egor.gmk.OnItemClickListener
+    var gmkListData: MutableList<GmkListData>,
+    private val listener: OnItemClickListener
         ) : RecyclerView.Adapter<GmkListAdapter.GmkListViewHolder>() {
 
     // Logic for onclick on the items
@@ -23,11 +23,10 @@ class GmkListAdapter (
 
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position)
+
                 }
             }
-
         }
-
     }
 
 
@@ -48,6 +47,9 @@ class GmkListAdapter (
           newTitle.text = gmkListData[position].title
           newPrice.text = gmkListData[position].price
         }
+
+
+
     }
 
     override fun getItemCount(): Int {

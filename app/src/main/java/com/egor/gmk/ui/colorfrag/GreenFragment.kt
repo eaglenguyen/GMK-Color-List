@@ -1,12 +1,13 @@
-package com.egor.gmk.colorfrag
+package com.egor.gmk.ui.colorfrag
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.navArgs
 import com.egor.gmk.R
 import com.egor.gmk.databinding.FragmentDetailBinding
@@ -20,11 +21,6 @@ class GreenFragment : Fragment() {
     // Class created for receiving argument passed in from previous fragment (number = position)
     private val args: GreenFragmentArgs by navArgs()
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-    }
 
 
     override fun onCreateView(
@@ -40,6 +36,7 @@ class GreenFragment : Fragment() {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
 
 
         val argImg = args.image

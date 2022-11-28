@@ -1,4 +1,4 @@
-package com.egor.gmk.colorfrag
+package com.egor.gmk.ui.colorfrag
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,21 +11,13 @@ import androidx.navigation.fragment.navArgs
 import com.egor.gmk.R
 import com.egor.gmk.databinding.FragmentDetailBinding
 
-class PurpleFragment : Fragment() {
+class AdditionFragment: Fragment() {
 
-    private val args: PurpleFragmentArgs by navArgs()
+    private val args: AdditionFragmentArgs by navArgs()
 
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,9 +35,9 @@ class PurpleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-        val argImg = args.imagePurp
-        val argTitle = args.titlePurp
-        val argPrice = args.pricePurp
+        val argImg = args.imageAddition
+        val argTitle = args.titleAddition
+        val argPrice = args.priceAddition
 
         val images : ImageView = requireView().findViewById(R.id.new_images)
         val title : TextView = requireView().findViewById(R.id.titles)
@@ -57,12 +49,12 @@ class PurpleFragment : Fragment() {
         price.text = argPrice
 
 
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }

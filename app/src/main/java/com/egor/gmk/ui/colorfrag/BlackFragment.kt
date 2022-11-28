@@ -1,4 +1,4 @@
-package com.egor.gmk.colorfrag
+package com.egor.gmk.ui.colorfrag
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,22 +11,12 @@ import androidx.navigation.fragment.navArgs
 import com.egor.gmk.R
 import com.egor.gmk.databinding.FragmentDetailBinding
 
-class AdditionFragment: Fragment() {
+class BlackFragment: Fragment() {
 
-    private val args: AdditionFragmentArgs by navArgs()
+    private val args: BlackFragmentArgs by navArgs()
 
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
-
-
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-
-    }
-
 
 
 
@@ -46,9 +36,9 @@ class AdditionFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-        val argImg = args.imageAddition
-        val argTitle = args.titleAddition
-        val argPrice = args.priceAddition
+        val argImg = args.imageBlack
+        val argTitle = args.titleBlack
+        val argPrice = args.priceBlack
 
         val images : ImageView = requireView().findViewById(R.id.new_images)
         val title : TextView = requireView().findViewById(R.id.titles)
@@ -58,6 +48,7 @@ class AdditionFragment: Fragment() {
         images.setImageResource(argImg)
         title.text = argTitle
         price.text = argPrice
+
 
 
     }

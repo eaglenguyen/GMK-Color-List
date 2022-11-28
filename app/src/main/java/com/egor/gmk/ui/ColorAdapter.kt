@@ -1,4 +1,4 @@
-package com.egor.gmk.adapter
+package com.egor.gmk.ui
 
 import android.content.Context
 import android.graphics.Color
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.egor.gmk.ColorListFragmentDirections
 import com.egor.gmk.R
 
 

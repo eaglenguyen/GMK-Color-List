@@ -1,8 +1,9 @@
-package com.egor.gmk
+package com.egor.gmk.logic
 
 import android.os.Bundle
 
 import androidx.preference.PreferenceFragmentCompat
+import com.egor.gmk.R
 
 class SettingsFragment : PreferenceFragmentCompat() {
 

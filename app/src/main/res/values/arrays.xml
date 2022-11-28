@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="color">
+        <item>red</item>
         <item>green</item>
         <item>blue</item>
-        <item>black</item>
-        <item>white</item>
-        <item>red</item>
         <item>yellow</item>
         <item>pink</item>
         <item>purple</item>
-        <item>grey/Beige</item>
-        <item>brown</item>
         <item>orange</item>
-        <item>multiColor</item>
-        <item>addons</item>
+        <item>brown</item>
+        <item>white</item>
+        <item>grey/Beige</item>
+        <item>black</item>
+        <item>multi-Color</item>
+        <item>add-on</item>
     </string-array>
     <string-array name="colorCode">
-        <item>4caf50</item>
-        <item>0d47a1</item>
-        <item>000000</item>
-        <item>eeeeee</item>
-        <item>b71c1c</item>
-        <item>fdd835</item>
-        <item>f48fb1</item>
-        <item>6a1b9a</item>
-        <item>757575</item>
+        <item>7f0000</item>
+        <item>2e7d32</item>
+        <item>002171</item>
+        <item>fbc02d</item>
+        <item>f06292</item>
+        <item>4a148c</item>
+        <item>e65100</item>
         <item>3e2723</item>
-        <item>ef6c00</item>
+        <item>eeeeee</item>
+        <item>494949</item>
+        <item>000000</item>
         <item>212121</item>
         <item>212121</item>
     </string-array>

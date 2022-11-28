@@ -1,20 +1,21 @@
-package com.egor.gmk
+package com.egor.gmk.ui
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
+import android.view.*
+import androidx.appcompat.widget.SearchView
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.egor.gmk.adapter.GmkListAdapter
+import com.egor.gmk.OnItemClickListener
+import com.egor.gmk.R
 import com.egor.gmk.colors.*
 import com.egor.gmk.databinding.FragmentGmkListBinding
-
 
 
 class GmkListFragment : Fragment(), OnItemClickListener {
@@ -23,10 +24,8 @@ class GmkListFragment : Fragment(), OnItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
-    }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +41,49 @@ class GmkListFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val position = args.number
+/*
+        // The usage of an interface lets you inject your own implementation
+        val menuHost: MenuHost = requireActivity()
+
+        // Add menu items without using the Fragment Menu APIs
+        // Note how we can tie the MenuProvider to the viewLifecycleOwner
+        // and an optional Lifecycle.State (here, RESUMED) to indicate when
+        // the menu should be visible
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                // Add menu items here
+                menuInflater.inflate(R.menu.search_menu, menu)
+            }
+
+            override fun onMenuItemSelected(item: MenuItem): Boolean {
+                return when (item.itemId) {
+                    R.id.action_search -> {
+                        var searchView = item.actionView as SearchView
+
+                        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+                            override fun onQueryTextSubmit(query: String?): Boolean {
+                                return true
+                            }
+
+                            override fun onQueryTextChange(newText: String?): Boolean {
+                               return true
+                            }
+
+                        })
+
+                        return true
+                    }
+                    else -> false
+                }
+                return true
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+
+ */
+
+        recyclerView = binding.recyclerView
+
+
 
 
         recyclerView = binding.recyclerView
@@ -99,6 +141,12 @@ class GmkListFragment : Fragment(), OnItemClickListener {
             "multiColor" -> {view?.findNavController()?.navigate(action12)}
             "addons" -> {view?.findNavController()?.navigate(action13)}
         }
+    }
+
+
+
+    private fun searchGmk(text: String?) {
+
     }
 
 

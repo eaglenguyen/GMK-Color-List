@@ -8,8 +8,9 @@
 
     <fragment
         android:id="@+id/colorListFragment"
-        android:name="com.egor.gmk.ColorListFragment"
+        android:name="com.egor.gmk.ui.ColorListFragment"
         android:label="@string/ColorList"
+
         tools:layout="@layout/fragment_color_list">
 
         <action
@@ -21,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/gmkListFragment"
-        android:name="com.egor.gmk.GmkListFragment"
+        android:name="com.egor.gmk.ui.GmkListFragment"
         android:label="@string/WordList"
         tools:layout="@layout/fragment_gmk_list">
         <argument
@@ -73,7 +74,7 @@
     </fragment>
     <fragment
         android:id="@+id/greenFragment"
-        android:name="com.egor.gmk.colorfrag.GreenFragment"
+        android:name="com.egor.gmk.ui.colorfrag.GreenFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_detail">
         <argument
@@ -94,7 +95,7 @@
     </fragment>
     <fragment
         android:id="@+id/blueFragment"
-        android:name="com.egor.gmk.colorfrag.BlueFragment"
+        android:name="com.egor.gmk.ui.colorfrag.BlueFragment"
         android:label="{titleBlue}"
         tools:layout="@layout/fragment_detail">
         <action
@@ -115,7 +116,7 @@
     </fragment>
     <fragment
         android:id="@+id/blackFragment"
-        android:name="com.egor.gmk.colorfrag.BlackFragment"
+        android:name="com.egor.gmk.ui.colorfrag.BlackFragment"
         android:label="{titleBlack}">
         <action
             android:id="@+id/action_blackFragment_to_colorListFragment"
@@ -135,7 +136,7 @@
     </fragment>
     <fragment
         android:id="@+id/whiteFragment"
-        android:name="com.egor.gmk.colorfrag.WhiteFragment"
+        android:name="com.egor.gmk.ui.colorfrag.WhiteFragment"
         android:label="{titleWhite}">
         <action
             android:id="@+id/action_whiteFragment_to_colorListFragment"
@@ -155,7 +156,7 @@
     </fragment>
     <fragment
         android:id="@+id/redFragment"
-        android:name="com.egor.gmk.colorfrag.RedFragment"
+        android:name="com.egor.gmk.ui.colorfrag.RedFragment"
         android:label="{titleRed}">
         <action
             android:id="@+id/action_redFragment_to_colorListFragment"
@@ -175,7 +176,7 @@
     </fragment>
     <fragment
         android:id="@+id/yellowFragment"
-        android:name="com.egor.gmk.colorfrag.YellowFragment"
+        android:name="com.egor.gmk.ui.colorfrag.YellowFragment"
         android:label="{titleYellow}">
         <action
             android:id="@+id/action_yellowFragment_to_colorListFragment"
@@ -195,7 +196,7 @@
     </fragment>
     <fragment
         android:id="@+id/pinkFragment"
-        android:name="com.egor.gmk.colorfrag.PinkFragment"
+        android:name="com.egor.gmk.ui.colorfrag.PinkFragment"
         android:label="{titlePink}">
         <argument
             android:name="numberPink"
@@ -215,7 +216,7 @@
     </fragment>
     <fragment
         android:id="@+id/purpleFragment"
-        android:name="com.egor.gmk.colorfrag.PurpleFragment"
+        android:name="com.egor.gmk.ui.colorfrag.PurpleFragment"
         android:label="{titlePurp}">
         <action
             android:id="@+id/action_purpleFragment_to_colorListFragment"
@@ -235,7 +236,7 @@
     </fragment>
     <fragment
         android:id="@+id/brownFragment"
-        android:name="com.egor.gmk.colorfrag.BrownFragment"
+        android:name="com.egor.gmk.ui.colorfrag.BrownFragment"
         android:label="{titleBrown}">
         <action
             android:id="@+id/action_brownFragment_to_colorListFragment"
@@ -255,7 +256,7 @@
     </fragment>
     <fragment
         android:id="@+id/greyFragment"
-        android:name="com.egor.gmk.colorfrag.GreyFragment"
+        android:name="com.egor.gmk.ui.colorfrag.GreyFragment"
         android:label="{titleGrey}" >
         <action
             android:id="@+id/action_greyFragment_to_colorListFragment"
@@ -275,7 +276,7 @@
     </fragment>
     <fragment
         android:id="@+id/orangeFragment"
-        android:name="com.egor.gmk.colorfrag.OrangeFragment"
+        android:name="com.egor.gmk.ui.colorfrag.OrangeFragment"
         android:label="{titleOrange}">
         <action
             android:id="@+id/action_orangeFragment_to_colorListFragment"
@@ -295,7 +296,7 @@
     </fragment>
     <fragment
         android:id="@+id/multiColorFragment"
-        android:name="com.egor.gmk.colorfrag.MultiColorFragment"
+        android:name="com.egor.gmk.ui.colorfrag.MultiColorFragment"
         android:label="{titleMulti}">
         <action
             android:id="@+id/action_multiColorFragment_to_colorListFragment"
@@ -315,7 +316,7 @@
     </fragment>
     <fragment
         android:id="@+id/additionFragment"
-        android:name="com.egor.gmk.colorfrag.AdditionFragment"
+        android:name="com.egor.gmk.ui.colorfrag.AdditionFragment"
         android:label="{titleAddition}">
         <action
             android:id="@+id/action_additionFragment_to_colorListFragment"
@@ -335,7 +336,7 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.egor.gmk.SettingsFragment"
+        android:name="com.egor.gmk.logic.SettingsFragment"
         android:label="@string/settings">
         <action
             android:id="@+id/action_settingsFragment_to_colorListFragment"

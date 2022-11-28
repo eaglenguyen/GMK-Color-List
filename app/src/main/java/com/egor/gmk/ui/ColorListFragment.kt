@@ -1,16 +1,18 @@
-package com.egor.gmk
+package com.egor.gmk.ui
 
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.core.content.ContextCompat
+import androidx.core.view.MenuHost
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.egor.gmk.adapter.ColorAdapter
+import com.egor.gmk.R
 import com.egor.gmk.databinding.FragmentColorListBinding
 
 
@@ -29,12 +31,7 @@ class ColorListFragment : Fragment() {
     }
 
     // Option menu is displayed with this logic
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-        // @Deprecated("Deprecated in Java")
-        setHasOptionsMenu(true)
-    }
 
 
 // layout inflates onCreateView on Fragment
@@ -53,17 +50,46 @@ class ColorListFragment : Fragment() {
     // Below doesnt use findViewById because it uses recyclerview
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val menuHost: MenuHost = requireActivity()
+
+
+        menuHost.addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                // Add menu items here, Inflates top right menus
+                menuInflater.inflate(R.menu.layout_menu, menu)
+
+                // Connects logic of grid menu button to icon id
+                val layoutButton = menu.findItem(R.id.action_switch_layout)
+                setIcon(layoutButton)
+            }
+
+            override fun onMenuItemSelected(item: MenuItem): Boolean {
+                // Handle the menu selection
+                // Logic for menu buttons
+                return when (item.itemId) {
+                    R.id.action_switch_layout -> {
+                        isLinearLayoutManager = !isLinearLayoutManager
+                        chooseLayout()
+                        setIcon(item)
+                        return true
+                    }
+                    R.id.item_preference -> {
+                        goToPreferenceFrag()
+                        return true
+                    }
+                    else -> onMenuItemSelected(item)
+                }
+
+                return true
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+
         recyclerView = binding.recyclerView
         chooseLayout()
+
     }
 
-    @Deprecated("Deprecated in Java")
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.layout_menu, menu)
-
-        val layoutButton = menu.findItem(R.id.action_switch_layout)
-        setIcon(layoutButton)
-    }
 
 
     /**
@@ -75,11 +101,11 @@ class ColorListFragment : Fragment() {
     private fun chooseLayout() {
         when (isLinearLayoutManager) {
             true -> {
-                recyclerView.layoutManager = LinearLayoutManager(context)
+                recyclerView.layoutManager =  GridLayoutManager(context, 4)
                 recyclerView.adapter = ColorAdapter(requireContext())
             }
             false -> {
-                recyclerView.layoutManager = GridLayoutManager(context, 4)
+                recyclerView.layoutManager = LinearLayoutManager(context)
                 recyclerView.adapter = ColorAdapter(requireContext())
             }
         }
@@ -88,36 +114,18 @@ class ColorListFragment : Fragment() {
     private fun setIcon(menuItem: MenuItem?) {
         if (menuItem == null)
             return
-
         menuItem.icon =
             if (isLinearLayoutManager)
                 ContextCompat.getDrawable(this.requireContext(),
-                    R.drawable.ic_grid_layout
+                    R.drawable.ic_linear_layout
                 )
             else ContextCompat.getDrawable(this.requireContext(),
-                R.drawable.ic_linear_layout
+                R.drawable.ic_grid_layout
             )
     }
 
 
-
-    @Deprecated("Deprecated in Java")
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            com.egor.gmk.R.id.action_switch_layout -> {
-                isLinearLayoutManager = !isLinearLayoutManager
-                chooseLayout()
-                setIcon(item)
-                return true
-            }
-            com.egor.gmk.R.id.item_preference -> {
-                goToPreferenceFrag()
-                return true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-
-    }
+    // Logic for settings button
     private fun goToPreferenceFrag(){
         // Toast.makeText(requireContext(), "item is clicked", Toast.LENGTH_SHORT).show()
         val action = ColorListFragmentDirections.actionColorListFragmentToSettingsFragment()
