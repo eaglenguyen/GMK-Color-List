@@ -33,14 +33,14 @@ class NavigationTests {
 
         startScenario.onFragment { fragment ->
 
-            // Set the graph on the TestNavHostController
+            // S    et the graph on the TestNavHostController
             navController.setGraph(com.egor.gmk.R.navigation.nav_graph)
 
             // Make the NavController available via the findNavController() APIs
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
 
-        onView(withId(com.egor.gmk.R.id.button)).perform(click())
+        onView(withId(R.id.button_item)).perform(click())
         assertEquals(navController.currentDestination?.id, com.egor.gmk.R.id.colorListFragment)
 
     }

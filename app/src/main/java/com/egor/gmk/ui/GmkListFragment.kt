@@ -21,9 +21,8 @@ import com.egor.gmk.databinding.FragmentGmkListBinding
 class GmkListFragment : Fragment(), OnItemClickListener {
 
     private var _binding: FragmentGmkListBinding? = null
-    private lateinit var recyclerView: RecyclerView
     private val binding get() = _binding!!
-
+    private lateinit var recyclerView: RecyclerView
 
 
 
@@ -41,50 +40,6 @@ class GmkListFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val position = args.number
-/*
-        // The usage of an interface lets you inject your own implementation
-        val menuHost: MenuHost = requireActivity()
-
-        // Add menu items without using the Fragment Menu APIs
-        // Note how we can tie the MenuProvider to the viewLifecycleOwner
-        // and an optional Lifecycle.State (here, RESUMED) to indicate when
-        // the menu should be visible
-        menuHost.addMenuProvider(object : MenuProvider {
-            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                // Add menu items here
-                menuInflater.inflate(R.menu.search_menu, menu)
-            }
-
-            override fun onMenuItemSelected(item: MenuItem): Boolean {
-                return when (item.itemId) {
-                    R.id.action_search -> {
-                        var searchView = item.actionView as SearchView
-
-                        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-                            override fun onQueryTextSubmit(query: String?): Boolean {
-                                return true
-                            }
-
-                            override fun onQueryTextChange(newText: String?): Boolean {
-                               return true
-                            }
-
-                        })
-
-                        return true
-                    }
-                    else -> false
-                }
-                return true
-            }
-        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
-
- */
-
-        recyclerView = binding.recyclerView
-
-
-
 
         recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -94,13 +49,6 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         recyclerView.adapter = GmkListAdapter(list[position], this)
 
 
-        /*
-        recyclerView.addItemDecoration(
-            DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
-        )
-        */
-
-        // greenPic.fill(0,1,2)
     }
 
 
@@ -138,16 +86,13 @@ class GmkListFragment : Fragment(), OnItemClickListener {
             "grey/Beige" -> {view?.findNavController()?.navigate(action9)}
             "brown" -> {view?.findNavController()?.navigate(action10)}
             "orange" -> {view?.findNavController()?.navigate(action11)}
-            "multiColor" -> {view?.findNavController()?.navigate(action12)}
-            "addons" -> {view?.findNavController()?.navigate(action13)}
+            "multi-Color" -> {view?.findNavController()?.navigate(action12)}
+            "add-on" -> {view?.findNavController()?.navigate(action13)}
         }
     }
 
 
 
-    private fun searchGmk(text: String?) {
-
-    }
 
 
 

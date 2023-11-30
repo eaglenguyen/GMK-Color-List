@@ -101,11 +101,11 @@ class ColorListFragment : Fragment() {
     private fun chooseLayout() {
         when (isLinearLayoutManager) {
             true -> {
-                recyclerView.layoutManager =  GridLayoutManager(context, 4)
+                recyclerView.layoutManager = LinearLayoutManager(context)
                 recyclerView.adapter = ColorAdapter(requireContext())
             }
             false -> {
-                recyclerView.layoutManager = LinearLayoutManager(context)
+                recyclerView.layoutManager = GridLayoutManager(context, 4)
                 recyclerView.adapter = ColorAdapter(requireContext())
             }
         }
