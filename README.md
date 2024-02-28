@@ -9,10 +9,10 @@
 
 GMK Keycap Colors is a database that filters all 400+ keycaps made by GMK(Gunther, Meinhardt, and Kredler) into their corresponding color list and was made for the mechanical keyboard community. 
 
-It features a simple and straightforward design, offers an organized index of GMK keycap sets designed by many talented designers, and was built using Kotlin and Android Studio for frontend & backend. Also utilizes matrixzj aka Matrix Zou's [github/website](https://matrixzj.github.io/docs/gmk-keycaps) to offer more details on the keycap sets! 
+It features a simple and straightforward design, offers an organized index of GMK keycap sets designed by many talented designers, and was built using Kotlin and Android Studio/XML. Also utilizes matrixzj aka Matrix Zou's [github/website](https://matrixzj.github.io/docs/gmk-keycaps) to offer more details on the keycap sets! 
 
 
-GMK Keycap Colors was originally designed with keyboard enthusiast in mind. There was never a website or application that specifically filtered GMK keycaps into a color category. Which was why this project was created, to stop the endless hours of searching for the perfect keycap set to match your board. 
+GMK Keycap Colors was originally designed with keyboard enthusiast in mind. There wasn't a website or application that filtered these keycaps into a specific color that you wanted. Which was why I created on myself, To stop the endless hours of searching for the perfect keycap set to match your board! 
 
 ## First Look
 
