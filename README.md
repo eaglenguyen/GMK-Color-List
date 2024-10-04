@@ -17,8 +17,15 @@ There wasn't a website or application that filtered these keycaps into a specifi
 ![APP video](https://media0.giphy.com/media/YsooJvYr3xb2EaUQnx/giphy.gif?cid=790b7611e57cd84f35903e80e2fce52167a16978ff7a9f9c&rid=giphy.gif&ct=g) 
 
 ## Download
-[LINK TO PLAYSTORE](https://play.google.com/store/apps/details?id=com.egor.gmk) <br>
-IOS currently not supported.
+
+Go to the [Releases](https://github.com/eaglenguyen/GMK-Color-List/releases/) to download the latest APK. 
+
+
+<a href='https://play.google.com/store/apps/details?id=com.egor.gmk'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80"/></a> <br>
+
+Also on Google Play Store!
+
+*IOS currently not supported.*
 
 ## Future Plans
 
