@@ -593,7 +593,6 @@ val blackPic: Array<Int> = arrayOf(
     R.drawable.wob_hira,
     R.drawable.wob_katana,
     R.drawable.wob_red,
-
     0,
     0,
     0,

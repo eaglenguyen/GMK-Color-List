@@ -41,7 +41,7 @@
             android:icon="@drawable/github">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/EagleNewyen"/> />
+                android:data="https://github.com/eaglenguyen"/> />
 
         </Preference>
 
@@ -66,7 +66,7 @@
             app:title="@string/privacy"
             android:icon="@drawable/file">
             <intent android:action="android.intent.action.VIEW"
-                android:data="https://www.privacypolicies.com/live/6032962a-21a4-4110-84e2-86383e47051f"
+                android:data="https://www.privacypolicies.com/live/0eb9fb1e-4aa9-4032-88b6-9e52e2aa15f9"
                 />
         </Preference>
 
