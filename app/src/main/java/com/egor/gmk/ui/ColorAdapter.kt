@@ -59,7 +59,6 @@ class ColorAdapter (context: Context) :
 
 
         holder.buttonView.setOnClickListener {
-
             val action = ColorListFragmentDirections.actionColorListFragmentToGmkListFragment(number = position, word = item)
             holder.view.findNavController().navigate(action)
 

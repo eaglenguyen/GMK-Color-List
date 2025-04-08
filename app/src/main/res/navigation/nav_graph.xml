@@ -75,6 +75,9 @@
         <action
             android:id="@+id/action_gmkListFragment_to_additionFragment"
             app:destination="@id/additionFragment" />
+        <action
+            android:id="@+id/action_gmkListFragment_to_keycapsDetailFragment"
+            app:destination="@id/keycapsListFragment" />
     </fragment>
     <fragment
         android:id="@+id/greenFragment"
@@ -340,11 +343,21 @@
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.egor.gmk.logic.SettingsFragment"
+        android:name="com.egor.gmk.ui.SettingsFragment"
         android:label="@string/settings">
         <action
             android:id="@+id/action_settingsFragment_to_colorListFragment"
             app:destination="@id/colorListFragment" />
     </fragment>
-
+    <fragment
+        android:id="@+id/keycapsListFragment"
+        android:name="com.egor.gmk.ui.colorfrag.KeycapListFragment"
+        android:label="KeycapsListFragment" >
+        <action
+            android:id="@+id/action_keycapsListFragment_to_colorListFragment"
+            app:destination="@id/colorListFragment" />
+        <argument
+            android:name="keycap"
+            app:argType="com.egor.gmk.data.GmkListData" />
+    </fragment>
 </navigation>

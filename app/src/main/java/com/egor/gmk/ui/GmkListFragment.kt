@@ -3,18 +3,54 @@ package com.egor.gmk.ui
 
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.widget.SearchView
-import androidx.core.view.MenuHost
-import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Lifecycle
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.OnItemClickListener
-import com.egor.gmk.R
 import com.egor.gmk.colors.*
+import com.egor.gmk.data.additionPic
+import com.egor.gmk.data.additionPrice
+import com.egor.gmk.data.additionTitle
+import com.egor.gmk.data.blackPic
+import com.egor.gmk.data.blackPrice
+import com.egor.gmk.data.blackTitle
+import com.egor.gmk.data.bluePic
+import com.egor.gmk.data.bluePrice
+import com.egor.gmk.data.blueTitle
+import com.egor.gmk.data.brownPic
+import com.egor.gmk.data.brownPrice
+import com.egor.gmk.data.brownTitle
+import com.egor.gmk.data.greenPic
+import com.egor.gmk.data.greenPrice
+import com.egor.gmk.data.greenTitle
+import com.egor.gmk.data.greyPic
+import com.egor.gmk.data.greyPrice
+import com.egor.gmk.data.greyTitle
+import com.egor.gmk.data.multiPic
+import com.egor.gmk.data.multiPrice
+import com.egor.gmk.data.multiTitle
+import com.egor.gmk.data.orangePic
+import com.egor.gmk.data.orangePrice
+import com.egor.gmk.data.orangeTitle
+import com.egor.gmk.data.pinkPic
+import com.egor.gmk.data.pinkPrice
+import com.egor.gmk.data.pinkTitle
+import com.egor.gmk.data.purpPic
+import com.egor.gmk.data.purpPrice
+import com.egor.gmk.data.purpTitle
+import com.egor.gmk.data.redPic
+import com.egor.gmk.data.redPrice
+import com.egor.gmk.data.redTitle
+import com.egor.gmk.data.whitePic
+import com.egor.gmk.data.whitePrice
+import com.egor.gmk.data.whiteTitle
+import com.egor.gmk.data.yellowPic
+import com.egor.gmk.data.yellowPrice
+import com.egor.gmk.data.yellowTitle
 import com.egor.gmk.databinding.FragmentGmkListBinding
 
 
@@ -23,6 +59,7 @@ class GmkListFragment : Fragment(), OnItemClickListener {
     private var _binding: FragmentGmkListBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
+    // private val viewModel: ColorsViewModel by viewModels()
 
 
 
@@ -35,7 +72,7 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         return view
     }
 
-    // Class created for receiving argument passed in from previous fragment (number = position)
+    // object created for receiving argument passed in from previous fragment (number = position)
     private val args: GmkListFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,6 +83,7 @@ class GmkListFragment : Fragment(), OnItemClickListener {
 
         // populates the color keycaps list via position. Data/list from GmkListFragment
         // Position of companion obj - list
+
         recyclerView.adapter = GmkListAdapter(list[position], this)
 
 
@@ -58,37 +96,13 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         // Toast.makeText(requireContext(), "item $position is clicked", Toast.LENGTH_SHORT).show()
 
         val item = args.word
+        val positionNew = args.number
+        val selectedKeycap = list[positionNew][position]
+
+        val action = GmkListFragmentDirections.actionGmkListFragmentToKeycapsDetailFragment(keycap = selectedKeycap)
+         findNavController().navigate(action)
 
 
-        val action1 = GmkListFragmentDirections.actionGmkListFragmentToGreenFragment(number = position, image = greenPic[position], title = greenTitle[position], price = greenPrice[position])
-        val action2 = GmkListFragmentDirections.actionGmkListFragmentToBlueFragment(numberBlue = position, imageBlue = bluePic[position], titleBlue = blueTitle[position], priceBlue = bluePrice[position])
-        val action3 = GmkListFragmentDirections.actionGmkListFragmentToBlackFragment(numberBlack = position, imageBlack = blackPic[position], titleBlack = blackTitle[position], priceBlack = blackPrice[position])
-        val action4 = GmkListFragmentDirections.actionGmkListFragmentToWhiteFragment(numberWhite = position, imageWhite = whitePic[position], titleWhite = whiteTitle[position], priceWhite = whitePrice[position])
-        val action5 = GmkListFragmentDirections.actionGmkListFragmentToRedFragment(numberRed = position, imageRed = redPic[position], titleRed = redTitle[position], priceRed = redPrice[position])
-        val action6 = GmkListFragmentDirections.actionGmkListFragmentToYellowFragment(numberYellow = position, imageYellow = yellowPic[position], titleYellow = yellowTitle[position], priceYellow = yellowPrice[position])
-        val action7 = GmkListFragmentDirections.actionGmkListFragmentToPinkFragment(numberPink = position, imagePink = pinkPic[position], titlePink = pinkTitle[position], pricePink = pinkPrice[position])
-        val action8 = GmkListFragmentDirections.actionGmkListFragmentToPurpleFragment(numberPurp = position, imagePurp = purpPic[position], titlePurp = purpTitle[position], pricePurp = purpPrice[position])
-        val action9 = GmkListFragmentDirections.actionGmkListFragmentToGreyFragment(numberGrey = position, imageGrey = greyPic[position], titleGrey = greyTitle[position], priceGrey = greyPrice[position])
-        val action10 = GmkListFragmentDirections.actionGmkListFragmentToBrownFragment(numberBrown = position, imageBrown = brownPic[position], titleBrown = brownTitle[position], priceBrown = brownPrice[position])
-        val action11 = GmkListFragmentDirections.actionGmkListFragmentToOrangeFragment(numberOrange = position, imageOrange = orangePic[position], titleOrange = orangeTitle[position], priceOrange = orangePrice[position])
-        val action12 = GmkListFragmentDirections.actionGmkListFragmentToMultiColorFragment(numberMulti = position, imageMulti = multiPic[position], titleMulti = multiTitle[position], priceMulti = multiPrice[position])
-        val action13 = GmkListFragmentDirections.actionGmkListFragmentToAdditionFragment(numberAddition = position, imageAddition = additionPic[position], titleAddition = additionTitle[position], priceAddition = additionPrice[position])
-
-        when (item) {
-            "green" -> {view?.findNavController()?.navigate(action1)}
-            "blue"-> {view?.findNavController()?.navigate(action2)}
-            "black" -> {view?.findNavController()?.navigate(action3)}
-            "white" -> {view?.findNavController()?.navigate(action4)}
-            "red" -> {view?.findNavController()?.navigate(action5)}
-            "yellow" -> {view?.findNavController()?.navigate(action6)}
-            "pink" -> {view?.findNavController()?.navigate(action7)}
-            "purple" -> {view?.findNavController()?.navigate(action8)}
-            "grey/Beige" -> {view?.findNavController()?.navigate(action9)}
-            "brown" -> {view?.findNavController()?.navigate(action10)}
-            "orange" -> {view?.findNavController()?.navigate(action11)}
-            "multi-Color" -> {view?.findNavController()?.navigate(action12)}
-            "add-on" -> {view?.findNavController()?.navigate(action13)}
-        }
     }
 
 

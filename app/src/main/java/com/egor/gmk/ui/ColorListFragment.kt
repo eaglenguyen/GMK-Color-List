@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.R
 import com.egor.gmk.databinding.FragmentColorListBinding
-
+import dagger.hilt.android.AndroidEntryPoint
 
 class ColorListFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.egor.gmk.colors
+package com.egor.gmk.data
 
 import com.egor.gmk.R
 
@@ -211,96 +211,6 @@ val greenPrice: Array<String> = arrayOf(
 
 )
 
-/*
-val greenInfo: Array<String> = arrayOf(
-     "-S3LQ",
-    "\"Hereby I would like to present to you my latest work GMK Baltic. The name of the set comes from the modifier color RAL 190 60 30 Baltic green.\n" +
-            "The novelty keys are inspired by one of my favorite design style: The Memphis style.\" \n\n" + "-kingnestea ",
-    "\"British racing green is an iconic colour from the world of automotive sport. Dating back almost 120 years, the colour has been used by Jaguar, " +
-            "Aston Martin, Mini, Lotus and Bentley. After spending a while playing with colours, I settled on RAL 6005, RAL 1001 and GMK's WS1 as the " +
-            "perfect combination for a balanced set within the theme.\" \n\n -lewisflude ",
-    "\"Hereby I'd like to introduce you GMK Camping.\n" +
-            "This was planned after the success run of SA Camping, and we finally have the time to settle this down.\n" +
-            "First of all, Camping was created by Monkey six with ideas came from friends among the Camp group.\" \n\n -kingnestea",
-    "\"\n" +
-            "Fall approaches and trees begin to drop their leaves, but the mighty conifers will defiantly display their foliage against the change of the seasons, a fitting time for the return of GMK Coniferous! " +
-            "My first keyset design is back after amazing first round performance and near-constant inquiries as to a second round. " +
-            "Bold green on classic beige and black backdrop and crafted by GMK in Cherry profile with their renowned double-shot injection molding process, " +
-            "this keyset lets you display your keyboard's \"foliage\" all year round for years to come.\" \n\n -donutcat",
-    "MrBingo-",
-    "sourmk-",
-    "\"Hey everyone! I had this concept quite a while in my head and finally it's here.\n" +
-            "May i present to you GMK Deku, a concept inspired by one of my favourite characters from an anime/manga. " +
-            "There's only a few kits because it is my first IC\" \n\n -Scucka",
-    "\"It is this transformative energy of change that inspires my first keycap set. Using complimentary deep green teal and burnt orange, " +
-            "I draw heavily on the cozy cottagecore aesthetic of early fall. " +
-            "This is when foxes are still active yet already fluffy with their winter coats, as the world around us silently decays.\" \n\n -boneandbee",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "\"hi\" \n\n -",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-
-
-
-
-) */
 
 
 

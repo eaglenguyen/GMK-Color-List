@@ -6,7 +6,7 @@ import com.egor.gmk.data.GmkListData
 // Data for List of each color
 //GmkListData(R.drawable., "Keycap name", "$price"),
 
-var red = mutableListOf(
+var red = listOf(
     GmkListData(R.drawable.b, "B", "$19.50"),
     GmkListData(R.drawable.burgundy, "Burgundy", "$130"),
     GmkListData(R.drawable.classic_red, "Classic Red", "$120"),
@@ -35,7 +35,7 @@ var red = mutableListOf(
 )
 
 
-var green = mutableListOf(
+var green = listOf(
     GmkListData(R.drawable.aurora_polaris, "Aurora Polaris", "$134.99"),
     GmkListData(R.drawable.baltic, "Baltic", "$134.99"),
     GmkListData(R.drawable.british_racing_green, "British Racing Green", "$129.99"),
@@ -67,7 +67,7 @@ var green = mutableListOf(
 )
 
 
-var blue = mutableListOf(
+var blue = listOf(
     GmkListData(R.drawable.a, "a", "$125"),
     GmkListData(R.drawable.aero, "Aero", "$120"),
     GmkListData(R.drawable.arabian, "Arabian Sea", "$125"),
@@ -149,7 +149,7 @@ var blue = mutableListOf(
 )
 
 
-var yellow = mutableListOf(
+var yellow = listOf(
     GmkListData(R.drawable.run, "3Run", "$125"),
     GmkListData(R.drawable.aegyptus, "Aegyptus", "$140"),
     GmkListData(R.drawable.cluck, "Cluck", "$135"),
@@ -166,7 +166,7 @@ var yellow = mutableListOf(
 )
 
 
-var pink = mutableListOf(
+var pink = listOf(
     GmkListData(R.drawable.blossom, "Blossom", "$125"),
     GmkListData(R.drawable.daifuku, "Daifuku", "$125"),
     GmkListData(R.drawable.darling, "Darling", "$120"),
@@ -186,7 +186,7 @@ var pink = mutableListOf(
 )
 
 
-var purple = mutableListOf(
+var purple = listOf(
     GmkListData(R.drawable.alpine, "Alpine", "$139.99"),
     GmkListData(R.drawable.alter, "Alter", "$130"),
     GmkListData(R.drawable.amethyst, "Amethyst", "$139.99"),
@@ -230,7 +230,7 @@ var purple = mutableListOf(
 )
 
 
-var orange = mutableListOf(
+var orange = listOf(
     GmkListData(R.drawable.carbon, "Carbon", "$159.99"),
     GmkListData(R.drawable.charred, "Charred Orange", "$94.72"),
     GmkListData(R.drawable.coral, "Coral", "$129.99"),
@@ -245,7 +245,7 @@ var orange = mutableListOf(
 )
 
 
-var brown = mutableListOf(
+var brown = listOf(
     GmkListData(R.drawable.bread, "Bread", "$134.99"),
     GmkListData(R.drawable.chocolate, "Chocolatier", "$145"),
     GmkListData(R.drawable.copper, "Copper", "$139.99"),
@@ -256,7 +256,7 @@ var brown = mutableListOf(
 )
 
 
-var white = mutableListOf(
+var white = listOf(
     GmkListData(R.drawable.agent, "Agent 01", "$135"),
     GmkListData(R.drawable.arctic, "Arctic", "$126"),
     GmkListData(R.drawable.art, "Art", "$125"),
@@ -299,7 +299,7 @@ var white = mutableListOf(
 )
 
 
-var grey_beige = mutableListOf(
+var grey_beige = listOf(
     GmkListData(R.drawable.r2_8008, "8008", "$99.99"),
     GmkListData(R.drawable.r3_9009, "9009", "$99.99"),
     GmkListData(R.drawable.apollo, "Apollo", "$120"),
@@ -372,7 +372,7 @@ var grey_beige = mutableListOf(
 )
 
 
-var black = mutableListOf(
+var black = listOf(
     GmkListData(R.drawable.cyrillic_wob, "Cyrillic WoB/Beige", "$119.99"),
     GmkListData(R.drawable.dark, "Dark", "$120"),
     GmkListData(R.drawable.demonic, "Demonic", "$139.00"),
@@ -412,7 +412,7 @@ var black = mutableListOf(
 )
 
 
-var multi = mutableListOf(
+var multi = listOf(
     GmkListData(R.drawable.analog, "Analog Dreams", "$125"),
     GmkListData(R.drawable.awaken, "Awaken", "$120"),
     GmkListData(R.drawable.colorchrome, "Colorchrome", "$120"),
@@ -436,7 +436,7 @@ var multi = mutableListOf(
 )
 
 
-var addons = mutableListOf(
+var addons = listOf(
 
      GmkListData(R.drawable.accent_one, "Accent Keys One (3 kits)", "$35"),
      GmkListData(R.drawable.accent_two, "Accent Keys Two (3 kits)", "$25"),
@@ -497,6 +497,7 @@ var list = arrayListOf(
     black,
     multi,
     addons
-
 )
+
+val allKeycaps = red + green + blue + yellow + pink + purple + orange + brown + white + grey_beige + black + multi + addons
 

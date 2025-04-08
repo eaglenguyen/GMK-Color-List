@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 const val TAG = "Eagle"
 
 class GmkListAdapter (
-    var gmkListData: MutableList<GmkListData>,
+    private var gmkListData: List<GmkListData>,
     private val listener: OnItemClickListener
         ) : RecyclerView.Adapter<GmkListAdapter.GmkListViewHolder>() {
 
@@ -22,7 +22,7 @@ class GmkListAdapter (
 
         init {
             binding.root.setOnClickListener {
-                val position = adapterPosition
+                val position = bindingAdapterPosition
 
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position)
@@ -41,7 +41,6 @@ class GmkListAdapter (
 
 
     override fun onBindViewHolder(holder: GmkListViewHolder, position: Int) {
-        val startTime = System.currentTimeMillis()
 
         //Picasso.get().load()
 
@@ -54,7 +53,6 @@ class GmkListAdapter (
           newPrice.text = gmkListData[position].price
         }
 
-        Log.d(TAG, "bindView time: " + (System.currentTimeMillis() - startTime))
 
 
     }

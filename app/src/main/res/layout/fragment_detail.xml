@@ -14,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:contentDescription="image"
         android:paddingBottom="10dp"
         android:src="@drawable/grey"
         app:layout_constraintBottom_toTopOf="@+id/view_space"
@@ -57,26 +58,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titles" />
 
-            />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-
-    <!--
-    <TextView
-        android:id="@+id/infos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is the Description"
-        android:padding="4dp"
-        app:layout_constraintStart_toStartOf="@+id/view_space"
-        app:layout_constraintTop_toBottomOf="@+id/prices" />
-
-        -->
 
 
 

@@ -17,8 +17,7 @@ import androidx.navigation.ui.setupWithNavController
 
 import com.egor.gmk.R
 import com.egor.gmk.databinding.ActivityDetailBinding
-
-
+import dagger.hilt.android.AndroidEntryPoint
 
 class MainActivity : AppCompatActivity() {
 
