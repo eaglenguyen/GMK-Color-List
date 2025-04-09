@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/action_switch_layout"
         android:title="@string/action_switch_layout"
         android:icon="@drawable/ic_linear_layout"

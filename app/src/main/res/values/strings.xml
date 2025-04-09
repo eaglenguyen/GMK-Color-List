@@ -3,6 +3,8 @@
     <string name="ColorList">GMK Colors</string>
     <string name="action_switch_layout" />
     <string name="WordList">GMK Keycaps</string>
+    <string name="KeycapName">Title</string>
+
     <string name="gmk">GMK</string>
     <string name="settings">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->

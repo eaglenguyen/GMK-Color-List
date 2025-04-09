@@ -17,8 +17,10 @@ import androidx.navigation.ui.setupWithNavController
 
 import com.egor.gmk.R
 import com.egor.gmk.databinding.ActivityDetailBinding
+import com.egor.gmk.ui.colorlist.ColorListFragment
 import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     // variables for nav controller and viewmodel
@@ -39,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
 
+
+
         // A reference to nav host fragment
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -47,8 +51,6 @@ class MainActivity : AppCompatActivity() {
 
         // Instantiate the navController using the NavHostFragment
         navController = navHostFragment.navController
-
-
 
 
         // Make sure actions in the ActionBar get propagated to the NavController
@@ -79,22 +81,9 @@ class MainActivity : AppCompatActivity() {
         // Logic to only show bottom nav on detailed keycap fragment
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.greenFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.blueFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.blackFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.whiteFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.redFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.yellowFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.pinkFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.purpleFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.greyFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.brownFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.orangeFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.multiColorFragment -> binding.bottomNav.visibility = View.VISIBLE
-                R.id.additionFragment -> binding.bottomNav.visibility = View.VISIBLE
+                R.id.keycapsDetailFragment -> binding.bottomNav.visibility = View.VISIBLE
                 else -> binding.bottomNav.visibility = View.GONE
             }
-
             }
 
 

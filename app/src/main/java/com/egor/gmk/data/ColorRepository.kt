@@ -1,15 +1,18 @@
 package com.egor.gmk.data
 
-import androidx.lifecycle.LiveData
 import com.egor.gmk.room.Colors
 import com.egor.gmk.room.ColorsDao
+import kotlinx.coroutines.flow.Flow
 
 class ColorRepository(private val dao: ColorsDao) {
-    fun getKeycapsByCategory(category: String): LiveData<List<Colors>> {
-        return dao.getKeycapsByCategory(category)
-    }
+
+    val allKeycaps: Flow<List<Colors>> = dao.getAllKeycaps()
 
     suspend fun insertAll(keycaps: List<Colors>) {
         dao.insertAll(keycaps)
     }
+
+
+
+
 }

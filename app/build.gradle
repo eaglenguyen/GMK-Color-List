@@ -2,10 +2,10 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
-    id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.dagger.hilt.android'
     id 'kotlin-parcelize'
+    id 'com.google.devtools.ksp'
 
 
 }
@@ -42,10 +42,7 @@ android {
     }
 }
 
-// Allow references to generated code
-kapt {
-    correctErrorTypes = true
-}
+
 
 dependencies {
 
@@ -58,7 +55,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
-    implementation platform('com.google.firebase:firebase-bom:30.0.2')
 
 
     implementation 'androidx.preference:preference-ktx:1.2.1'
@@ -66,7 +62,7 @@ dependencies {
     implementation 'androidx.room:room-ktx:2.6.1'
 
     // room library
-    annotationProcessor 'androidx.room:room-compiler:2.6.1'
+    ksp 'androidx.room:room-compiler:2.6.1'
     implementation 'androidx.room:room-common:2.6.1'
 
 
@@ -92,8 +88,8 @@ dependencies {
 
     implementation 'androidx.core:core-splashscreen:1.0.1'
 
-    implementation 'com.google.dagger:hilt-android:2.51.1'
-    kapt 'com.google.dagger:hilt-android-compiler:2.51.1'
+    implementation 'com.google.dagger:hilt-android:2.52'
+    ksp 'com.google.dagger:hilt-android-compiler:2.52'
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
 

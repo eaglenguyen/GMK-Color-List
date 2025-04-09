@@ -1,4 +1,4 @@
-package com.egor.di
+package com.egor.gmk.di
 
 import android.app.Application
 import androidx.room.Room

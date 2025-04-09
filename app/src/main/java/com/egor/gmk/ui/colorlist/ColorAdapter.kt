@@ -1,4 +1,4 @@
-package com.egor.gmk.ui
+package com.egor.gmk.ui.colorlist
 
 import android.content.Context
 import android.graphics.Color
@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.R
+import com.egor.gmk.ui.colorlist.ColorListFragmentDirections
 
 
 class ColorAdapter (context: Context) :
@@ -59,7 +60,10 @@ class ColorAdapter (context: Context) :
 
 
         holder.buttonView.setOnClickListener {
-            val action = ColorListFragmentDirections.actionColorListFragmentToGmkListFragment(number = position, word = item)
+            val action = ColorListFragmentDirections.actionColorListFragmentToGmkListFragment(
+                number = position,
+                word = item
+            )
             holder.view.findNavController().navigate(action)
 
         }
@@ -73,63 +77,4 @@ class ColorAdapter (context: Context) :
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
-
-class ColorAdapter (private val dataset: List<Colors>, private val context: Context) : RecyclerView.Adapter<ColorAdapter.ColorViewHolder>() {
-
-    // holds the view (button)
-    class ColorViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val buttonView: Button = view.findViewById(R.id.button_item)
-    }
-
-    // inflates/displays the view( button )
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorViewHolder {
-        val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.button_view, parent, false)
-
-
-        return ColorViewHolder(adapterLayout)
-
-
-    }
-    /**
-     * Replace the contents of a view (invoked by the layout manager)
-     */
-    override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {
-        val item = dataset[]
-        holder.buttonView.text = context.resources.getString(item.stringResourceId)
-    }
-
-    override fun getItemCount(): Int {
-        return dataset.size
-
-    }
-}
-
- */
 

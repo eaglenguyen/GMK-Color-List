@@ -1,4 +1,4 @@
-package com.egor.gmk.ui
+package com.egor.gmk.ui.colorlist
 
 
 import android.os.Bundle
@@ -78,6 +78,10 @@ class ColorListFragment : Fragment() {
                         goToPreferenceFrag()
                         return true
                     }
+                    R.id.search -> {
+                        navigateToKeycapList()
+                        return true
+                    }
                     else -> onMenuItemSelected(item)
                 }
 
@@ -129,6 +133,11 @@ class ColorListFragment : Fragment() {
     private fun goToPreferenceFrag(){
         // Toast.makeText(requireContext(), "item is clicked", Toast.LENGTH_SHORT).show()
         val action = ColorListFragmentDirections.actionColorListFragmentToSettingsFragment()
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToKeycapList() {
+        val action = ColorListFragmentDirections.actionColorListFragmentToAllKeycapListFragment2()
         findNavController().navigate(action)
     }
 

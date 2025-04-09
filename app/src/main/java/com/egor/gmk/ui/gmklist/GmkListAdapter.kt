@@ -1,16 +1,13 @@
-package com.egor.gmk.ui
+package com.egor.gmk.ui.gmklist
 
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.OnItemClickListener
 import com.egor.gmk.data.GmkListData
 import com.egor.gmk.databinding.ItemViewBinding
-import com.squareup.picasso.Picasso
 
-const val TAG = "Eagle"
 
 class GmkListAdapter (
     private var gmkListData: List<GmkListData>,
@@ -26,7 +23,6 @@ class GmkListAdapter (
 
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position)
-
                 }
             }
         }
@@ -43,14 +39,15 @@ class GmkListAdapter (
     override fun onBindViewHolder(holder: GmkListViewHolder, position: Int) {
 
         //Picasso.get().load()
+        val selectedColor = gmkListData[position]
 
         holder.binding.apply {
           // position dictates the index of GmkListData array
           // position of companion obj - gmkList
 
-          newImage.setImageResource(gmkListData[position].image)
-          newTitle.text = gmkListData[position].title
-          newPrice.text = gmkListData[position].price
+          newImage.setImageResource(selectedColor.image)
+          newTitle.text = selectedColor.title
+          newPrice.text = selectedColor.price
         }
 
 

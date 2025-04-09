@@ -8,7 +8,7 @@ import com.egor.gmk.data.GmkListData
 
 var red = listOf(
     GmkListData(R.drawable.b, "B", "$19.50"),
-    GmkListData(R.drawable.burgundy, "Burgundy", "$130"),
+    GmkListData(R.drawable.burgundy, "Burgundy-R3", "$130"),
     GmkListData(R.drawable.classic_red, "Classic Red", "$120"),
     GmkListData(R.drawable.crimson, "Crimson Cadet", "$115"),
     GmkListData(R.drawable.higanbana, "Higanbana", "$129"),
@@ -440,6 +440,7 @@ var addons = listOf(
 
      GmkListData(R.drawable.accent_one, "Accent Keys One (3 kits)", "$35"),
      GmkListData(R.drawable.accent_two, "Accent Keys Two (3 kits)", "$25"),
+     GmkListData(R.drawable.beige_addon, "Beige-Addon-Extension", "$15 - $60"),
      GmkListData(R.drawable.beige_uwu, "Beige/WoB uwu Add-on", "$36.99"),
      GmkListData(R.drawable.black_mod, "GMK Black Modi", "$60"),
      GmkListData(R.drawable.ceresia, "Ceresia", "$79"),
@@ -499,5 +500,4 @@ var list = arrayListOf(
     addons
 )
 
-val allKeycaps = red + green + blue + yellow + pink + purple + orange + brown + white + grey_beige + black + multi + addons
 
