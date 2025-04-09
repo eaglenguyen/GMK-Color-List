@@ -30,4 +30,6 @@ interface ColorsDao {
 
     @Query("DELETE FROM colors")
     suspend fun deleteAllColors()
+
+    // test
 }
