@@ -13,7 +13,7 @@
         android:id="@+id/search_input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,6 +21,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/search_input"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -33,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layoutAnimation="@anim/layout_animation_two"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_input_layout"
         tools:listitem="@layout/item_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

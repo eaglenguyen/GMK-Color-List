@@ -1,14 +1,11 @@
 package com.egor.gmk.ui.keycaps
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.egor.gmk.R
-import com.egor.gmk.data.GmkListData
 import com.egor.gmk.databinding.ItemViewBinding
 import com.egor.gmk.room.Colors
 
@@ -53,4 +50,6 @@ class AllKeycapListAdapter : ListAdapter<Colors, AllKeycapListAdapter.KeycapView
             return oldItem == newItem
         }
 }
+
+
 }

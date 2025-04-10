@@ -1,6 +1,9 @@
 package com.egor.gmk.ui.keycaps
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -9,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -20,6 +24,7 @@ import com.egor.gmk.data.allKeycaps
 import com.egor.gmk.databinding.FragmentGmkListBinding
 import com.egor.gmk.databinding.FragmentGmkListRoomBinding
 import com.egor.gmk.ui.colorfrag.ColorsViewModel
+import com.egor.gmk.ui.colorfrag.SearchScreenUiEvent
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -41,14 +46,10 @@ class AllKeycapListFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val menuHost: MenuHost = requireActivity()
 
 
+        //viewmodel.insertKeycaps(allKeycaps)
 
-
-        viewmodel.insertKeycaps(allKeycaps)
-
-        // Combine the red and green lists
 
         // Setup RecyclerView and Adapter
         val binding = FragmentGmkListRoomBinding.bind(view)
@@ -58,37 +59,30 @@ class AllKeycapListFragment: Fragment() {
             adapter = keycapAdapter
         }
 
-        // Search text input visibility logic
-        menuHost.addMenuProvider(object : MenuProvider {
-            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                // Add menu items here, Inflates top right menus
-                menuInflater.inflate(R.menu.search_menu, menu)
-            }
+        binding.searchInput.addTextChangedListener { text ->
+            val query = text.toString()
+            Log.d("InputNew", "Query: $query")
+            viewmodel.searchKeycaps(query)
+        }
 
-            override fun onMenuItemSelected(item: MenuItem): Boolean {
-                // Handle the menu selection
-                // Logic for menu buttons
-                return when (item.itemId) {
-                    R.id.search -> {
-                        binding.searchInputLayout.visibility =
-                            if (binding.searchInputLayout.visibility == View.VISIBLE)
-                                View.GONE else View.VISIBLE
-                        return true
-                    }
-                    else -> false
-                }
-            }
-        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+
+
+
+
+
+
 
 
 
         lifecycleScope.launch {
             viewLifecycleOwner.lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewmodel.allKeycaps.collect{ keycaps ->
+                viewmodel.searchResults.collect { keycaps ->
                     keycapAdapter.submitList(keycaps)
+
                 }
             }
         }
+
 
     }
 

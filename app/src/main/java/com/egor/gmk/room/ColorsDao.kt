@@ -15,7 +15,7 @@ interface ColorsDao {
     @Query("SELECT * FROM colors ORDER BY title ASC")
     fun getAllKeycaps(): Flow<List<Colors>>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(keycaps: List<Colors>)
 
     @Query(
@@ -28,8 +28,5 @@ interface ColorsDao {
     suspend fun searchKeycapName(query: String): List<Colors>
 
 
-    @Query("DELETE FROM colors")
-    suspend fun deleteAllColors()
 
-    // test
 }

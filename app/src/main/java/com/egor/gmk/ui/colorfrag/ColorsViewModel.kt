@@ -1,11 +1,14 @@
 package com.egor.gmk.ui.colorfrag
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.egor.gmk.data.ColorRepository
 import com.egor.gmk.room.Colors
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -16,8 +19,19 @@ class ColorsViewModel @Inject constructor(
 ):ViewModel() {
 
 
+
     val allKeycaps: Flow<List<Colors>> = repository.allKeycaps
 
+    private val _searchResults = MutableStateFlow<List<Colors>>(emptyList())
+    val searchResults: StateFlow<List<Colors>> = _searchResults
+
+    init {
+        viewModelScope.launch {
+            repository.allKeycaps.collect { all ->
+                _searchResults.value = all
+            }
+        }
+    }
 
     // Insert keycaps (used for seeding DB)
     fun insertKeycaps(keycaps: List<Colors>) {
@@ -36,6 +50,21 @@ class ColorsViewModel @Inject constructor(
 
         }
     }
+
+    fun searchKeycaps(query: String) {
+        viewModelScope.launch {
+            Log.d("Search", "Searching for: $query")
+
+            val results = if (query.isBlank()) {
+                repository.allKeycaps.first()
+            } else {
+                repository.searchKeycapName(query)
+            }
+            _searchResults.value = results
+        }
+    }
+
+
 
 
 }
