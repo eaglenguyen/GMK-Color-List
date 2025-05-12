@@ -30,7 +30,7 @@ Also on Google Play Store!
 ## Future Plans
 
 - [ ] Add multiple pictures for child kits (currently only shows base kit picture).
-- [ ] Search feature
+- [X] Search feature
 -	[ ] IOS version
 
 
