@@ -1,14 +1,6 @@
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--
-    <PreferenceCategory app:title="@string/general">
 
-        <SwitchPreferenceCompat
-            app:defaultValue="false"
-            app:key="switch_preference"
-            app:title="@string/dark_theme" />
-
-    </PreferenceCategory>  -->
 
     <PreferenceCategory app:title="@string/socials">
 

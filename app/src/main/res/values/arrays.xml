@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="color">
-        <item>red</item>
-        <item>green</item>
-        <item>blue</item>
-        <item>yellow</item>
-        <item>pink</item>
-        <item>purple</item>
-        <item>orange</item>
-        <item>brown</item>
-        <item>white</item>
-        <item>grey/Beige</item>
-        <item>black</item>
-        <item>multi-Color</item>
-        <item>add-on</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Orange</item>
+        <item>Brown</item>
+        <item>White</item>
+        <item>Grey/Beige</item>
+        <item>Black</item>
+        <item>Multi-Color</item>
+        <item>Add-on</item>
     </string-array>
     <string-array name="colorCode">
         <item>7f0000</item>

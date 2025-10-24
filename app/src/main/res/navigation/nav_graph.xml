@@ -16,10 +16,7 @@
         <action
             android:id="@+id/action_colorListFragment_to_gmkListFragment"
             app:destination="@id/gmkListFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            />
         <action
             android:id="@+id/action_colorListFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
@@ -66,6 +63,10 @@
             app:argType="com.egor.gmk.room.Colors"
             app:nullable="true"
             android:defaultValue="@null" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
     <fragment
         android:id="@+id/allKeycapListFragment2"

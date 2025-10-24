@@ -2,9 +2,7 @@ package com.egor.gmk.data
 
 import com.egor.gmk.room.Colors
 import com.egor.gmk.room.ColorsDao
-import com.egor.gmk.util.Resource
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 
 class ColorRepository(
     private val dao: ColorsDao

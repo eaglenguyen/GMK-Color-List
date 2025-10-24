@@ -1,8 +1,10 @@
 package com.egor.gmk.ui.gmklist
 
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.OnItemClickListener
 import com.egor.gmk.data.GmkListData
@@ -22,7 +24,7 @@ class GmkListAdapter (
                 val position = bindingAdapterPosition
 
                 if (position != RecyclerView.NO_POSITION) {
-                    listener.onItemClick(position)
+                    listener.onItemClick(position, binding.newImage, gmkListData[position])
                 }
             }
         }
@@ -48,7 +50,12 @@ class GmkListAdapter (
           newImage.setImageResource(selectedColor.image)
           newTitle.text = selectedColor.title
           newPrice.text = selectedColor.price
+
+            ViewCompat.setTransitionName(newImage,"gmk_image_transition_$position")
         }
+        // Detects which large image is crashing app
+        Log.d("Adapter", "Loading image: ${selectedColor.title}, resId: ${selectedColor.image}")
+
 
 
 

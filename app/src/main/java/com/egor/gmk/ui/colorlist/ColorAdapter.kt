@@ -15,18 +15,10 @@ import com.egor.gmk.ui.colorlist.ColorListFragmentDirections
 class ColorAdapter (context: Context) :
     RecyclerView.Adapter<ColorAdapter.ColorViewHolder>() {
 
-    // Important variables
-    private val filteredWords: List<String>
-    private val colors: List<String>
-
-
-    init {
-        // list of the color words
-        filteredWords = context.resources.getStringArray(R.array.color).toList()
-        // list of the actual color code
-        colors = context.resources.getStringArray(R.array.colorCode).toList()
-    }
-
+    // list of the color words
+    private val filteredWords: List<String> = context.resources.getStringArray(R.array.color).toList()
+    // list of the actual color code
+    private val colors: List<String> = context.resources.getStringArray(R.array.colorCode).toList()
 
 
     // holds the view (button)

@@ -5,14 +5,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.OnItemClickListener
 import com.egor.gmk.colors.list
+import com.egor.gmk.data.GmkListData
 import com.egor.gmk.databinding.FragmentGmkListBinding
+import com.google.android.material.transition.MaterialSharedAxis
 
 
 class GmkListFragment : Fragment(), OnItemClickListener {
@@ -20,16 +27,45 @@ class GmkListFragment : Fragment(), OnItemClickListener {
     private var _binding: FragmentGmkListBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
-    // private val viewModel: ColorsViewModel by viewModels()
 
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val forward = MaterialSharedAxis(MaterialSharedAxis.X, true).apply {
+            duration = 1500 // default is ~300
+        }
+        val backward = MaterialSharedAxis(MaterialSharedAxis.X, false).apply {
+            duration = 1500
+        }
+
+        enterTransition = forward
+        returnTransition = backward
+    }
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
         _binding = FragmentGmkListBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        // Apply top inset to toolbar
+        ViewCompat.setOnApplyWindowInsetsListener(binding.recyclerView) { toolbar, insets ->
+            val statusBars = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            val layoutParams = toolbar.layoutParams as ConstraintLayout.LayoutParams
+
+            toolbar.updateLayoutParams<ConstraintLayout.LayoutParams> {
+                topMargin = statusBars.top
+            }
+            insets
+        }
+
+
         return view
     }
 
@@ -53,14 +89,18 @@ class GmkListFragment : Fragment(), OnItemClickListener {
 
 
 
-    override fun onItemClick(onClickPosition: Int) {
+    override fun onItemClick(position: Int, sharedImage: View, keycap: GmkListData) {
         // Toast.makeText(requireContext(), "item $position is clicked", Toast.LENGTH_SHORT).show()
 
         val argPosition = args.number
-        val selectedKeycap = list[argPosition][onClickPosition]
+        val selectedKeycap = list[argPosition][position]
 
-        val action = GmkListFragmentDirections.actionGmkListFragmentToKeycapsDetailFragment(keycap = selectedKeycap)
-        findNavController().navigate(action)
+        val action = GmkListFragmentDirections.actionGmkListFragmentToKeycapsDetailFragment(keycap = selectedKeycap, position = position)
+        val extras = FragmentNavigatorExtras(
+            sharedImage to ViewCompat.getTransitionName(sharedImage)!!
+        )
+
+        findNavController().navigate(action,extras)
 
         // What it was before *
        /* val action1 = GmkListFragmentDirections.actionGmkListFragmentToGreenFragment(
@@ -83,6 +123,7 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         super.onDestroyView()
         _binding = null
     }
+
 
 
 }

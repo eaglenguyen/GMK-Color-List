@@ -1,12 +1,10 @@
 package com.egor.gmk.ui.colorfrag
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.egor.gmk.data.ColorRepository
 import com.egor.gmk.room.Colors
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
@@ -19,12 +17,13 @@ class ColorsViewModel @Inject constructor(
 ):ViewModel() {
 
 
-
-    val allKeycaps: Flow<List<Colors>> = repository.allKeycaps
-
+    // private bcos only viewmodel can update the variable
     private val _searchResults = MutableStateFlow<List<Colors>>(emptyList())
+
+    // Exposes _searchResults as read only for fragments. can only be collected and not modified
     val searchResults: StateFlow<List<Colors>> = _searchResults
 
+    // populates list once viewmodel is created
     init {
         viewModelScope.launch {
             repository.allKeycaps.collect { all ->
@@ -33,7 +32,7 @@ class ColorsViewModel @Inject constructor(
         }
     }
 
-    // Insert keycaps (used for seeding DB)
+    // Insert keycaps from class (used for seeding DB)
     fun insertKeycaps(keycaps: List<Colors>) {
         viewModelScope.launch {
             // Obtain a snapshot of current keycaps
@@ -53,11 +52,11 @@ class ColorsViewModel @Inject constructor(
 
     fun searchKeycaps(query: String) {
         viewModelScope.launch {
-            Log.d("Search", "Searching for: $query")
-
             val results = if (query.isBlank()) {
+                // returns full list like init block
                 repository.allKeycaps.first()
             } else {
+                // Executes SQL query and updates emptylist
                 repository.searchKeycapName(query)
             }
             _searchResults.value = results

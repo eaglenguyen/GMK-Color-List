@@ -6,6 +6,10 @@ import android.view.*
 import androidx.core.content.ContextCompat
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.setPadding
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.findNavController
@@ -14,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.R
 import com.egor.gmk.databinding.FragmentColorListBinding
+import com.google.android.material.transition.MaterialSharedAxis
 import dagger.hilt.android.AndroidEntryPoint
 
 class ColorListFragment : Fragment() {
@@ -32,6 +37,11 @@ class ColorListFragment : Fragment() {
 
     // Option menu is displayed with this logic
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        exitTransition = MaterialSharedAxis(MaterialSharedAxis.X, /* forward = */ true)
+        reenterTransition = MaterialSharedAxis(MaterialSharedAxis.X, /* forward = */ false)
+    }
 
 
 // layout inflates onCreateView on Fragment
@@ -39,6 +49,8 @@ class ColorListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+
         _binding = FragmentColorListBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -52,7 +64,6 @@ class ColorListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val menuHost: MenuHost = requireActivity()
-
 
         menuHost.addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
@@ -90,6 +101,8 @@ class ColorListFragment : Fragment() {
         }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         recyclerView = binding.recyclerView
+
+
         chooseLayout()
 
     }

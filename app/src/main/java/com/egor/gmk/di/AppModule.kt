@@ -15,6 +15,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    // provides app-level dependencies so u can inject them later on
 
     @Provides
     @Singleton

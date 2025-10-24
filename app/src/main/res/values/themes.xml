@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.GMK" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.GMK" parent="Theme.Material3.Dark.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/grey</item>
         <item name="colorPrimaryVariant">@color/grey_var</item>
@@ -13,5 +13,8 @@
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/black</item>
+        <!-- Customize your animation here -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
     </style>
 </resources>

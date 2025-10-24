@@ -19,3 +19,20 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Room
+-keep class androidx.room.** { *; }
+-keepclassmembers class * {
+    @androidx.room.* <methods>;
+}
+
+# Lifecycle
+-keep class androidx.lifecycle.** { *; }
+
+# ViewModels with Hilt
+-keepclassmembers class * {
+    @dagger.hilt.android.lifecycle.HiltViewModel <init>(...);
+}
+
+# Prevent stripping of any Fragment
+-keep public class * extends androidx.fragment.app.Fragment

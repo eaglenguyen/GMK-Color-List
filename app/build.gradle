@@ -9,24 +9,27 @@ plugins {
 
 
 }
+// To upload new app version, update version code and name. Then sign the bundle.
 
 android {
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.egor.gmk"
         minSdk 26
-        targetSdk 34
-        versionCode 10
-        versionName "3.5"
+        targetSdk 36
+        versionCode 14
+        versionName "6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -40,6 +43,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    namespace 'com.egor.gmk'
 }
 
 
@@ -51,7 +55,7 @@ dependencies {
     implementation"androidx.fragment:fragment-ktx:1.6.2"
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
@@ -78,8 +82,8 @@ dependencies {
 
 
     // def nav_version = '2.4.2'
-    implementation "androidx.navigation:navigation-fragment-ktx:2.7.5"
-    implementation "androidx.navigation:navigation-ui-ktx:2.7.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.8.9"
+    implementation "androidx.navigation:navigation-ui-ktx:2.8.9"
 
     androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
     androidTestImplementation 'androidx.navigation:navigation-testing:2.7.5'

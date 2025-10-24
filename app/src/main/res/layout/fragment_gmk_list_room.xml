@@ -29,12 +29,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="@color/dark_gray"
         app:layout_constraintEnd_toEndOf="parent"
         android:layoutAnimation="@anim/layout_animation_two"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/search_input_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

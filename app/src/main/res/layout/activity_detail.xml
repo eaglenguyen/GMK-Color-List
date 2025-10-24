@@ -5,7 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.egor.gmk.ui.MainActivity">
+    tools:context="com.egor.gmk.ui.MainActivity"
+
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="GMK App"
+        android:background="@color/grey"
+        android:elevation="4dp"
+        app:titleTextColor="?attr/colorOnSurface"
+        app:menu="@menu/layout_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
     <androidx.fragment.app.FragmentContainerView
