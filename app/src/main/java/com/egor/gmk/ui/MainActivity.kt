@@ -106,7 +106,10 @@ class MainActivity : AppCompatActivity() {
 
             toolbar.updateLayoutParams<ConstraintLayout.LayoutParams> {
                 topMargin = 175
+                bottomMargin = 50
             }
+
+
             insets
         }
 

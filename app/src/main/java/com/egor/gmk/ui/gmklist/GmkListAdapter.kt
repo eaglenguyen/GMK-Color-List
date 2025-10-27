@@ -1,7 +1,6 @@
 package com.egor.gmk.ui.gmklist
 
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
@@ -11,6 +10,10 @@ import com.egor.gmk.data.GmkListData
 import com.egor.gmk.databinding.ItemViewBinding
 
 
+
+//Use RecyclerView.Adapter if your list never changes (e.g., static settings list).
+//
+//Use ListAdapter if your list is dynamic or you want auto animations when updating data (e.g., chat messages, search results, or products).
 class GmkListAdapter (
     private var gmkListData: List<GmkListData>,
     private val listener: OnItemClickListener
@@ -19,10 +22,10 @@ class GmkListAdapter (
     // Logic for onclick on the items
     inner class GmkListViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
 
+        // Added logic for sharedElement transition
         init {
             binding.root.setOnClickListener {
                 val position = bindingAdapterPosition
-
                 if (position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(position, binding.newImage, gmkListData[position])
                 }
@@ -40,8 +43,9 @@ class GmkListAdapter (
 
     override fun onBindViewHolder(holder: GmkListViewHolder, position: Int) {
 
-        //Picasso.get().load()
         val selectedColor = gmkListData[position]
+
+
 
         holder.binding.apply {
           // position dictates the index of GmkListData array
@@ -53,8 +57,6 @@ class GmkListAdapter (
 
             ViewCompat.setTransitionName(newImage,"gmk_image_transition_$position")
         }
-        // Detects which large image is crashing app
-        Log.d("Adapter", "Loading image: ${selectedColor.title}, resId: ${selectedColor.image}")
 
 
 

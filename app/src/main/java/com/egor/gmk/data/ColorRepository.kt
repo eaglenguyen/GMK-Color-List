@@ -19,8 +19,4 @@ class ColorRepository(
         return dao.searchKeycapName(query)
     }
 
-
-
-
-
 }

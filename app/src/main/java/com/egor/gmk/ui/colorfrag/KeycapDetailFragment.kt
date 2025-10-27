@@ -30,14 +30,14 @@ class KeycapDetailFragment: Fragment() {
 
         sharedElementEnterTransition = MaterialContainerTransform(requireContext(), true).apply {
             drawingViewId = R.id.nav_host_fragment
-            duration = 500
+            duration = 1000
             scrimColor = Color.TRANSPARENT
             fadeMode = MaterialContainerTransform.FADE_MODE_THROUGH
         }
 
         sharedElementReturnTransition = MaterialContainerTransform(requireContext(), false).apply {
             drawingViewId = R.id.nav_host_fragment
-            duration = 400
+            duration = 1000
             scrimColor = Color.TRANSPARENT
             fadeMode = MaterialContainerTransform.FADE_MODE_THROUGH
         }
@@ -74,25 +74,26 @@ class KeycapDetailFragment: Fragment() {
         val keycapRoom = args.keycapRoom
         val position = args.position
 
+        val detailFragImage = binding.newImages
+
+
 
         if (keycap != null) {
             binding.newImages.setImageResource(keycap.image)
             binding.titles.text = keycap.title
             binding.prices.text = keycap.price
-
-
             // label aka actionbar title
             (requireActivity() as AppCompatActivity).supportActionBar?.title = keycap.title
-
-            ViewCompat.setTransitionName(binding.newImages, "gmk_image_transition_$position")
-
+            ViewCompat.setTransitionName(detailFragImage, "gmk_image_transition_$position")
         }
-
 
         if (keycapRoom != null) {
             binding.newImages.setImageResource(keycapRoom.imageRes)
             binding.titles.text = keycapRoom.title
             binding.prices.text = keycapRoom.price
+
+
+            ViewCompat.setTransitionName(detailFragImage, "keycap_image_transition_$position")
         }
 
 

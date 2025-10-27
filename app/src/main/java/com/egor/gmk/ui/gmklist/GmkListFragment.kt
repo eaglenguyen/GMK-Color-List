@@ -36,7 +36,7 @@ class GmkListFragment : Fragment(), OnItemClickListener {
             duration = 1500 // default is ~300
         }
         val backward = MaterialSharedAxis(MaterialSharedAxis.X, false).apply {
-            duration = 1500
+            duration = 300
         }
 
         enterTransition = forward
@@ -55,13 +55,22 @@ class GmkListFragment : Fragment(), OnItemClickListener {
         val view = binding.root
 
         // Apply top inset to toolbar
-        ViewCompat.setOnApplyWindowInsetsListener(binding.recyclerView) { toolbar, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.recyclerView) { rv, insets ->
             val statusBars = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-            val layoutParams = toolbar.layoutParams as ConstraintLayout.LayoutParams
+            val layoutParams = rv.layoutParams as ConstraintLayout.LayoutParams
 
-            toolbar.updateLayoutParams<ConstraintLayout.LayoutParams> {
+            rv.updateLayoutParams<ConstraintLayout.LayoutParams> {
                 topMargin = statusBars.top
+                bottomMargin = statusBars.bottom
             }
+
+            // padding for bottom contents
+            rv.setPadding(
+                statusBars.left,
+                0,
+                statusBars.right,
+                150
+            )
             insets
         }
 
