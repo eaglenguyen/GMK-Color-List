@@ -16,7 +16,7 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.OnItemClickListener
-import com.egor.gmk.colors.list
+import com.egor.gmk.data.list
 import com.egor.gmk.data.GmkListData
 import com.egor.gmk.databinding.FragmentGmkListBinding
 import com.google.android.material.transition.MaterialSharedAxis

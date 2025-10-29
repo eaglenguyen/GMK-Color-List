@@ -2,6 +2,7 @@ package com.egor.gmk.ui.colorlist
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.egor.gmk.R
 import com.egor.gmk.ui.colorlist.ColorListFragmentDirections
+import androidx.core.graphics.toColorInt
+import androidx.core.view.setPadding
 
 
 class ColorAdapter (context: Context) :
@@ -39,15 +42,36 @@ class ColorAdapter (context: Context) :
      * Replace the contents of a view (invoked by the layout manager)
      */
     override fun onBindViewHolder(holder: ColorViewHolder, position: Int) {
-        // color name for each button
         val item = filteredWords[position]
-        // Color code for each button
-        val color = "#" + colors[position]
+        val button = holder.buttonView
 
+        button.text = item
 
-        holder.buttonView.text = item
-        holder.buttonView.setBackgroundColor(Color.parseColor(color))
+        if (position == 12) { // e.g., 3 or whatever index
+            // Rainbow gradient for special button
+            val rainbowDrawable = GradientDrawable(
+                GradientDrawable.Orientation.LEFT_RIGHT,
+                intArrayOf(
+                    Color.RED,
+                    "#FF7F00".toColorInt(), // Orange
+                    Color.YELLOW,
+                    Color.GREEN,
+                    Color.BLUE,
+                    "#4B0082".toColorInt(), // Indigo
+                    "#8B00FF".toColorInt()  // Violet
+                )
+            ).apply {
+                cornerRadius = 100f
+            }
 
+            button.background = rainbowDrawable
+            button.backgroundTintList = null // Remove tint so gradient shows
+
+        } else {
+            // Solid color for regular buttons
+            val color = "#" + colors[position]
+            holder.buttonView.setBackgroundColor(color.toColorInt())
+        }
 
 
 

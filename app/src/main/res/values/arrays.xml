@@ -12,8 +12,8 @@
         <item>White</item>
         <item>Grey/Beige</item>
         <item>Black</item>
-        <item>Multi-Color</item>
         <item>Add-on</item>
+        <item>Multi-Color</item>
     </string-array>
     <string-array name="colorCode">
         <item>7f0000</item>
@@ -24,7 +24,7 @@
         <item>4a148c</item>
         <item>e65100</item>
         <item>3e2723</item>
-        <item>eeeeee</item>
+        <item>E0E0E0</item>
         <item>494949</item>
         <item>000000</item>
         <item>212121</item>

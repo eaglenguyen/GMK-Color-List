@@ -1,8 +1,6 @@
-package com.egor.gmk.colors
+package com.egor.gmk.data
 
 import com.egor.gmk.R
-import com.egor.gmk.data.GmkListData
-import com.egor.gmk.room.Colors
 
 // Switch from "Android" to "Project" to save new&large(2000+ pixels)
 // images into drawable-xxhdpi folder to avoid crashing in older api
@@ -555,8 +553,9 @@ var list = arrayListOf(
     white,
     grey_beige,
     black,
+    addons,
     multi,
-    addons
+
 )
 
 
